@@ -1,0 +1,1052 @@
+1<?xml version="1.0" encoding="utf-8"?>
+2<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+3    package="com.tencent.map.vector.demo"
+4    android:versionCode="1"
+5    android:versionName="1.0" >
+6
+7    <uses-sdk
+8        android:minSdkVersion="22"
+8-->C:\Users\Haoyu\Desktop\demo\TencentMapSDK_Android_3D_v5.1.0\TencentMapDemo_Android-master\app\src\main\AndroidManifest.xml
+9        android:targetSdkVersion="29" />
+9-->C:\Users\Haoyu\Desktop\demo\TencentMapSDK_Android_3D_v5.1.0\TencentMapDemo_Android-master\app\src\main\AndroidManifest.xml
+10    <!-- 访问网络. 某些位置信息需要从网络服务器获取 -->
+11    <uses-permission android:name="android.permission.INTERNET" /> <!-- 访问WiFi状态. 需要WiFi信息用于网络定位 -->
+11-->C:\Users\Haoyu\Desktop\demo\TencentMapSDK_Android_3D_v5.1.0\TencentMapDemo_Android-master\app\src\main\AndroidManifest.xml:6:5-67
+11-->C:\Users\Haoyu\Desktop\demo\TencentMapSDK_Android_3D_v5.1.0\TencentMapDemo_Android-master\app\src\main\AndroidManifest.xml:6:22-64
+12    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" /> <!-- 修改WiFi状态. 发起WiFi扫描, 需要WiFi信息用于网络定位 -->
+12-->C:\Users\Haoyu\Desktop\demo\TencentMapSDK_Android_3D_v5.1.0\TencentMapDemo_Android-master\app\src\main\AndroidManifest.xml:7:5-79
+12-->C:\Users\Haoyu\Desktop\demo\TencentMapSDK_Android_3D_v5.1.0\TencentMapDemo_Android-master\app\src\main\AndroidManifest.xml:7:22-76
+13    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" /> <!-- 访问网络状态, 检测网络的可用性. 需要网络运营商相关信息用于网络定位 -->
+13-->C:\Users\Haoyu\Desktop\demo\TencentMapSDK_Android_3D_v5.1.0\TencentMapDemo_Android-master\app\src\main\AndroidManifest.xml:8:5-76
+13-->C:\Users\Haoyu\Desktop\demo\TencentMapSDK_Android_3D_v5.1.0\TencentMapDemo_Android-master\app\src\main\AndroidManifest.xml:8:22-73
+14    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" /> <!-- 访问网络的变化, 需要某些信息用于网络定位 -->
+14-->C:\Users\Haoyu\Desktop\demo\TencentMapSDK_Android_3D_v5.1.0\TencentMapDemo_Android-master\app\src\main\AndroidManifest.xml:9:5-81
+14-->C:\Users\Haoyu\Desktop\demo\TencentMapSDK_Android_3D_v5.1.0\TencentMapDemo_Android-master\app\src\main\AndroidManifest.xml:9:22-78
+15    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+15-->C:\Users\Haoyu\Desktop\demo\TencentMapSDK_Android_3D_v5.1.0\TencentMapDemo_Android-master\app\src\main\AndroidManifest.xml:10:5-80
+15-->C:\Users\Haoyu\Desktop\demo\TencentMapSDK_Android_3D_v5.1.0\TencentMapDemo_Android-master\app\src\main\AndroidManifest.xml:10:22-77
+16    <uses-permission android:name="android.permission.READ_PHONE_STATE" /> <!-- 访问手机当前状态, 需要device id用于网络定位 -->
+16-->C:\Users\Haoyu\Desktop\demo\TencentMapSDK_Android_3D_v5.1.0\TencentMapDemo_Android-master\app\src\main\AndroidManifest.xml:11:5-75
+16-->C:\Users\Haoyu\Desktop\demo\TencentMapSDK_Android_3D_v5.1.0\TencentMapDemo_Android-master\app\src\main\AndroidManifest.xml:11:22-72
+17    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+17-->C:\Users\Haoyu\Desktop\demo\TencentMapSDK_Android_3D_v5.1.0\TencentMapDemo_Android-master\app\src\main\AndroidManifest.xml:12:5-79
+17-->C:\Users\Haoyu\Desktop\demo\TencentMapSDK_Android_3D_v5.1.0\TencentMapDemo_Android-master\app\src\main\AndroidManifest.xml:12:22-76
+18    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+18-->C:\Users\Haoyu\Desktop\demo\TencentMapSDK_Android_3D_v5.1.0\TencentMapDemo_Android-master\app\src\main\AndroidManifest.xml:13:5-81
+18-->C:\Users\Haoyu\Desktop\demo\TencentMapSDK_Android_3D_v5.1.0\TencentMapDemo_Android-master\app\src\main\AndroidManifest.xml:13:22-78
+19    <uses-permission android:name="android.permission.INTERNET" />
+19-->C:\Users\Haoyu\Desktop\demo\TencentMapSDK_Android_3D_v5.1.0\TencentMapDemo_Android-master\app\src\main\AndroidManifest.xml:6:5-67
+19-->C:\Users\Haoyu\Desktop\demo\TencentMapSDK_Android_3D_v5.1.0\TencentMapDemo_Android-master\app\src\main\AndroidManifest.xml:6:22-64
+20    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+20-->C:\Users\Haoyu\Desktop\demo\TencentMapSDK_Android_3D_v5.1.0\TencentMapDemo_Android-master\app\src\main\AndroidManifest.xml:8:5-76
+20-->C:\Users\Haoyu\Desktop\demo\TencentMapSDK_Android_3D_v5.1.0\TencentMapDemo_Android-master\app\src\main\AndroidManifest.xml:8:22-73
+21    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+21-->C:\Users\Haoyu\Desktop\demo\TencentMapSDK_Android_3D_v5.1.0\TencentMapDemo_Android-master\app\src\main\AndroidManifest.xml:16:5-76
+21-->C:\Users\Haoyu\Desktop\demo\TencentMapSDK_Android_3D_v5.1.0\TencentMapDemo_Android-master\app\src\main\AndroidManifest.xml:16:22-73
+22    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+22-->C:\Users\Haoyu\Desktop\demo\TencentMapSDK_Android_3D_v5.1.0\TencentMapDemo_Android-master\app\src\main\AndroidManifest.xml:7:5-79
+22-->C:\Users\Haoyu\Desktop\demo\TencentMapSDK_Android_3D_v5.1.0\TencentMapDemo_Android-master\app\src\main\AndroidManifest.xml:7:22-76
+23    <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE" />
+23-->C:\Users\Haoyu\Desktop\demo\TencentMapSDK_Android_3D_v5.1.0\TencentMapDemo_Android-master\app\src\main\AndroidManifest.xml:18:5-79
+23-->C:\Users\Haoyu\Desktop\demo\TencentMapSDK_Android_3D_v5.1.0\TencentMapDemo_Android-master\app\src\main\AndroidManifest.xml:18:22-76
+24    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+24-->C:\Users\Haoyu\Desktop\demo\TencentMapSDK_Android_3D_v5.1.0\TencentMapDemo_Android-master\app\src\main\AndroidManifest.xml:11:5-75
+24-->C:\Users\Haoyu\Desktop\demo\TencentMapSDK_Android_3D_v5.1.0\TencentMapDemo_Android-master\app\src\main\AndroidManifest.xml:11:22-72
+25    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+25-->C:\Users\Haoyu\Desktop\demo\TencentMapSDK_Android_3D_v5.1.0\TencentMapDemo_Android-master\app\src\main\AndroidManifest.xml:12:5-79
+25-->C:\Users\Haoyu\Desktop\demo\TencentMapSDK_Android_3D_v5.1.0\TencentMapDemo_Android-master\app\src\main\AndroidManifest.xml:12:22-76
+26
+27    <!-- 蓝牙扫描权限 -->
+28    <uses-permission android:name="android.permission.BLUETOOTH" />
+28-->[com.tencent.map.geolocation:TencentLocationSdk-openplatform:7.5.2] C:\Users\Haoyu\.gradle\wrapper\dists\gradle-8.2\caches\transforms-2\files-2.1\e7ac9e04fc3f0354d3b4243be149e92e\jetified-TencentLocationSdk-openplatform-7.5.2\AndroidManifest.xml:26:5-68
+28-->[com.tencent.map.geolocation:TencentLocationSdk-openplatform:7.5.2] C:\Users\Haoyu\.gradle\wrapper\dists\gradle-8.2\caches\transforms-2\files-2.1\e7ac9e04fc3f0354d3b4243be149e92e\jetified-TencentLocationSdk-openplatform-7.5.2\AndroidManifest.xml:26:22-65
+29    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" /> <!-- 前台service权限 -->
+29-->[com.tencent.map.geolocation:TencentLocationSdk-openplatform:7.5.2] C:\Users\Haoyu\.gradle\wrapper\dists\gradle-8.2\caches\transforms-2\files-2.1\e7ac9e04fc3f0354d3b4243be149e92e\jetified-TencentLocationSdk-openplatform-7.5.2\AndroidManifest.xml:27:5-74
+29-->[com.tencent.map.geolocation:TencentLocationSdk-openplatform:7.5.2] C:\Users\Haoyu\.gradle\wrapper\dists\gradle-8.2\caches\transforms-2\files-2.1\e7ac9e04fc3f0354d3b4243be149e92e\jetified-TencentLocationSdk-openplatform-7.5.2\AndroidManifest.xml:27:22-71
+30    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" /> <!-- 后台定位权限 -->
+30-->[com.tencent.map.geolocation:TencentLocationSdk-openplatform:7.5.2] C:\Users\Haoyu\.gradle\wrapper\dists\gradle-8.2\caches\transforms-2\files-2.1\e7ac9e04fc3f0354d3b4243be149e92e\jetified-TencentLocationSdk-openplatform-7.5.2\AndroidManifest.xml:29:5-77
+30-->[com.tencent.map.geolocation:TencentLocationSdk-openplatform:7.5.2] C:\Users\Haoyu\.gradle\wrapper\dists\gradle-8.2\caches\transforms-2\files-2.1\e7ac9e04fc3f0354d3b4243be149e92e\jetified-TencentLocationSdk-openplatform-7.5.2\AndroidManifest.xml:29:22-74
+31    <uses-permission android:name="android.permission.ACCESS_BACKGROUND_LOCATION" />
+31-->[com.tencent.map.geolocation:TencentLocationSdk-openplatform:7.5.2] C:\Users\Haoyu\.gradle\wrapper\dists\gradle-8.2\caches\transforms-2\files-2.1\e7ac9e04fc3f0354d3b4243be149e92e\jetified-TencentLocationSdk-openplatform-7.5.2\AndroidManifest.xml:31:5-85
+31-->[com.tencent.map.geolocation:TencentLocationSdk-openplatform:7.5.2] C:\Users\Haoyu\.gradle\wrapper\dists\gradle-8.2\caches\transforms-2\files-2.1\e7ac9e04fc3f0354d3b4243be149e92e\jetified-TencentLocationSdk-openplatform-7.5.2\AndroidManifest.xml:31:22-82
+32
+33    <application
+33-->C:\Users\Haoyu\Desktop\demo\TencentMapSDK_Android_3D_v5.1.0\TencentMapDemo_Android-master\app\src\main\AndroidManifest.xml:22:5-532:19
+34        android:allowBackup="true"
+34-->C:\Users\Haoyu\Desktop\demo\TencentMapSDK_Android_3D_v5.1.0\TencentMapDemo_Android-master\app\src\main\AndroidManifest.xml:23:9-35
+35        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+35-->[androidx.core:core:1.1.0] C:\Users\Haoyu\.gradle\wrapper\dists\gradle-8.2\caches\transforms-2\files-2.1\e601daed4ba62929db8b322b2974c8f8\core-1.1.0\AndroidManifest.xml:24:18-86
+36        android:debuggable="true"
+37        android:icon="@mipmap/ic_launcher"
+37-->C:\Users\Haoyu\Desktop\demo\TencentMapSDK_Android_3D_v5.1.0\TencentMapDemo_Android-master\app\src\main\AndroidManifest.xml:24:9-43
+38        android:label="@string/app_name"
+38-->C:\Users\Haoyu\Desktop\demo\TencentMapSDK_Android_3D_v5.1.0\TencentMapDemo_Android-master\app\src\main\AndroidManifest.xml:25:9-41
+39        android:roundIcon="@mipmap/ic_launcher_round"
+39-->C:\Users\Haoyu\Desktop\demo\TencentMapSDK_Android_3D_v5.1.0\TencentMapDemo_Android-master\app\src\main\AndroidManifest.xml:26:9-54
+40        android:supportsRtl="true"
+40-->C:\Users\Haoyu\Desktop\demo\TencentMapSDK_Android_3D_v5.1.0\TencentMapDemo_Android-master\app\src\main\AndroidManifest.xml:27:9-35
+41        android:theme="@style/AppTheme"
+41-->C:\Users\Haoyu\Desktop\demo\TencentMapSDK_Android_3D_v5.1.0\TencentMapDemo_Android-master\app\src\main\AndroidManifest.xml:28:9-40
+42        android:usesCleartextTraffic="true" >
+42-->C:\Users\Haoyu\Desktop\demo\TencentMapSDK_Android_3D_v5.1.0\TencentMapDemo_Android-master\app\src\main\AndroidManifest.xml:29:9-44
+43        <activity android:name="com.tencent.map.vector.demo.MainActivity" >
+43-->C:\Users\Haoyu\Desktop\demo\TencentMapSDK_Android_3D_v5.1.0\TencentMapDemo_Android-master\app\src\main\AndroidManifest.xml:32:9-38:20
+43-->C:\Users\Haoyu\Desktop\demo\TencentMapSDK_Android_3D_v5.1.0\TencentMapDemo_Android-master\app\src\main\AndroidManifest.xml:32:19-47
+44            <intent-filter>
+44-->C:\Users\Haoyu\Desktop\demo\TencentMapSDK_Android_3D_v5.1.0\TencentMapDemo_Android-master\app\src\main\AndroidManifest.xml:33:13-37:29
+45                <action android:name="android.intent.action.MAIN" />
+45-->C:\Users\Haoyu\Desktop\demo\TencentMapSDK_Android_3D_v5.1.0\TencentMapDemo_Android-master\app\src\main\AndroidManifest.xml:34:17-69
+45-->C:\Users\Haoyu\Desktop\demo\TencentMapSDK_Android_3D_v5.1.0\TencentMapDemo_Android-master\app\src\main\AndroidManifest.xml:34:25-66
+46
+47                <category android:name="android.intent.category.LAUNCHER" />
+47-->C:\Users\Haoyu\Desktop\demo\TencentMapSDK_Android_3D_v5.1.0\TencentMapDemo_Android-master\app\src\main\AndroidManifest.xml:36:17-77
+47-->C:\Users\Haoyu\Desktop\demo\TencentMapSDK_Android_3D_v5.1.0\TencentMapDemo_Android-master\app\src\main\AndroidManifest.xml:36:27-74
+48            </intent-filter>
+49        </activity>
+50        <activity
+50-->C:\Users\Haoyu\Desktop\demo\TencentMapSDK_Android_3D_v5.1.0\TencentMapDemo_Android-master\app\src\main\AndroidManifest.xml:39:9-46:20
+51            android:name="com.tencent.map.vector.demo.basic.MapViewActivity"
+51-->C:\Users\Haoyu\Desktop\demo\TencentMapSDK_Android_3D_v5.1.0\TencentMapDemo_Android-master\app\src\main\AndroidManifest.xml:40:13-50
+52            android:description="@string/demo_description_show_map"
+52-->C:\Users\Haoyu\Desktop\demo\TencentMapSDK_Android_3D_v5.1.0\TencentMapDemo_Android-master\app\src\main\AndroidManifest.xml:41:13-68
+53            android:label="@string/demo_label_show_map" >
+53-->C:\Users\Haoyu\Desktop\demo\TencentMapSDK_Android_3D_v5.1.0\TencentMapDemo_Android-master\app\src\main\AndroidManifest.xml:42:13-56
+54            <meta-data
+54-->C:\Users\Haoyu\Desktop\demo\TencentMapSDK_Android_3D_v5.1.0\TencentMapDemo_Android-master\app\src\main\AndroidManifest.xml:43:13-45:59
+55                android:name="@string/demo_type"
+55-->C:\Users\Haoyu\Desktop\demo\TencentMapSDK_Android_3D_v5.1.0\TencentMapDemo_Android-master\app\src\main\AndroidManifest.xml:44:17-49
+56                android:value="@string/demo_type_basic" />
+56-->C:\Users\Haoyu\Desktop\demo\TencentMapSDK_Android_3D_v5.1.0\TencentMapDemo_Android-master\app\src\main\AndroidManifest.xml:45:17-56
+57        </activity>
+58        <activity
+58-->C:\Users\Haoyu\Desktop\demo\TencentMapSDK_Android_3D_v5.1.0\TencentMapDemo_Android-master\app\src\main\AndroidManifest.xml:47:9-54:20
+59            android:name="com.tencent.map.vector.demo.basic.SetMapTypeActivity"
+59-->C:\Users\Haoyu\Desktop\demo\TencentMapSDK_Android_3D_v5.1.0\TencentMapDemo_Android-master\app\src\main\AndroidManifest.xml:48:13-53
+60            android:description="@string/demo_description_map_type"
+60-->C:\Users\Haoyu\Desktop\demo\TencentMapSDK_Android_3D_v5.1.0\TencentMapDemo_Android-master\app\src\main\AndroidManifest.xml:49:13-68
+61            android:label="@string/demo_label_map_type" >
+61-->C:\Users\Haoyu\Desktop\demo\TencentMapSDK_Android_3D_v5.1.0\TencentMapDemo_Android-master\app\src\main\AndroidManifest.xml:50:13-56
+62            <meta-data
+62-->C:\Users\Haoyu\Desktop\demo\TencentMapSDK_Android_3D_v5.1.0\TencentMapDemo_Android-master\app\src\main\AndroidManifest.xml:43:13-45:59
+63                android:name="@string/demo_type"
+63-->C:\Users\Haoyu\Desktop\demo\TencentMapSDK_Android_3D_v5.1.0\TencentMapDemo_Android-master\app\src\main\AndroidManifest.xml:44:17-49
+64                android:value="@string/demo_type_basic" />
+64-->C:\Users\Haoyu\Desktop\demo\TencentMapSDK_Android_3D_v5.1.0\TencentMapDemo_Android-master\app\src\main\AndroidManifest.xml:45:17-56
+65        </activity>
+66        <activity
+66-->C:\Users\Haoyu\Desktop\demo\TencentMapSDK_Android_3D_v5.1.0\TencentMapDemo_Android-master\app\src\main\AndroidManifest.xml:55:9-62:20
+67            android:name="com.tencent.map.vector.demo.basic.MapRenderLayerActivity"
+67-->C:\Users\Haoyu\Desktop\demo\TencentMapSDK_Android_3D_v5.1.0\TencentMapDemo_Android-master\app\src\main\AndroidManifest.xml:56:13-57
+68            android:description="@string/demo_description_show_mapRenderLayer"
+68-->C:\Users\Haoyu\Desktop\demo\TencentMapSDK_Android_3D_v5.1.0\TencentMapDemo_Android-master\app\src\main\AndroidManifest.xml:57:13-79
+69            android:label="@string/demo_label_show_mapRenderLayer" >
+69-->C:\Users\Haoyu\Desktop\demo\TencentMapSDK_Android_3D_v5.1.0\TencentMapDemo_Android-master\app\src\main\AndroidManifest.xml:58:13-67
+70            <meta-data
+70-->C:\Users\Haoyu\Desktop\demo\TencentMapSDK_Android_3D_v5.1.0\TencentMapDemo_Android-master\app\src\main\AndroidManifest.xml:43:13-45:59
+71                android:name="@string/demo_type"
+71-->C:\Users\Haoyu\Desktop\demo\TencentMapSDK_Android_3D_v5.1.0\TencentMapDemo_Android-master\app\src\main\AndroidManifest.xml:44:17-49
+72                android:value="@string/demo_type_basic" />
+72-->C:\Users\Haoyu\Desktop\demo\TencentMapSDK_Android_3D_v5.1.0\TencentMapDemo_Android-master\app\src\main\AndroidManifest.xml:45:17-56
+73        </activity>
+74        <activity
+74-->C:\Users\Haoyu\Desktop\demo\TencentMapSDK_Android_3D_v5.1.0\TencentMapDemo_Android-master\app\src\main\AndroidManifest.xml:63:9-70:20
+75            android:name="com.tencent.map.vector.demo.location.LocationLayerActivity"
+75-->C:\Users\Haoyu\Desktop\demo\TencentMapSDK_Android_3D_v5.1.0\TencentMapDemo_Android-master\app\src\main\AndroidManifest.xml:64:13-59
+76            android:description="@string/demo_description_show_location"
+76-->C:\Users\Haoyu\Desktop\demo\TencentMapSDK_Android_3D_v5.1.0\TencentMapDemo_Android-master\app\src\main\AndroidManifest.xml:65:13-73
+77            android:label="@string/demo_label_show_location" >
+77-->C:\Users\Haoyu\Desktop\demo\TencentMapSDK_Android_3D_v5.1.0\TencentMapDemo_Android-master\app\src\main\AndroidManifest.xml:66:13-61
+78            <meta-data
+78-->C:\Users\Haoyu\Desktop\demo\TencentMapSDK_Android_3D_v5.1.0\TencentMapDemo_Android-master\app\src\main\AndroidManifest.xml:43:13-45:59
+79                android:name="@string/demo_type"
+79-->C:\Users\Haoyu\Desktop\demo\TencentMapSDK_Android_3D_v5.1.0\TencentMapDemo_Android-master\app\src\main\AndroidManifest.xml:44:17-49
+80                android:value="@string/demo_type_location" />
+80-->C:\Users\Haoyu\Desktop\demo\TencentMapSDK_Android_3D_v5.1.0\TencentMapDemo_Android-master\app\src\main\AndroidManifest.xml:45:17-56
+81        </activity>
+82        <activity
+82-->C:\Users\Haoyu\Desktop\demo\TencentMapSDK_Android_3D_v5.1.0\TencentMapDemo_Android-master\app\src\main\AndroidManifest.xml:71:9-78:20
+83            android:name="com.tencent.map.vector.demo.location.LocationPointActivity"
+83-->C:\Users\Haoyu\Desktop\demo\TencentMapSDK_Android_3D_v5.1.0\TencentMapDemo_Android-master\app\src\main\AndroidManifest.xml:72:13-59
+84            android:description="@string/demo_description_change_location_style"
+84-->C:\Users\Haoyu\Desktop\demo\TencentMapSDK_Android_3D_v5.1.0\TencentMapDemo_Android-master\app\src\main\AndroidManifest.xml:73:13-81
+85            android:label="@string/demo_label_change_location_style" >
+85-->C:\Users\Haoyu\Desktop\demo\TencentMapSDK_Android_3D_v5.1.0\TencentMapDemo_Android-master\app\src\main\AndroidManifest.xml:74:13-69
+86            <meta-data
+86-->C:\Users\Haoyu\Desktop\demo\TencentMapSDK_Android_3D_v5.1.0\TencentMapDemo_Android-master\app\src\main\AndroidManifest.xml:43:13-45:59
+87                android:name="@string/demo_type"
+87-->C:\Users\Haoyu\Desktop\demo\TencentMapSDK_Android_3D_v5.1.0\TencentMapDemo_Android-master\app\src\main\AndroidManifest.xml:44:17-49
+88                android:value="@string/demo_type_location" />
+88-->C:\Users\Haoyu\Desktop\demo\TencentMapSDK_Android_3D_v5.1.0\TencentMapDemo_Android-master\app\src\main\AndroidManifest.xml:45:17-56
+89        </activity>
+90        <activity
+90-->C:\Users\Haoyu\Desktop\demo\TencentMapSDK_Android_3D_v5.1.0\TencentMapDemo_Android-master\app\src\main\AndroidManifest.xml:79:9-86:20
+91            android:name="com.tencent.map.vector.demo.basic.IndoorMapActivity"
+91-->C:\Users\Haoyu\Desktop\demo\TencentMapSDK_Android_3D_v5.1.0\TencentMapDemo_Android-master\app\src\main\AndroidManifest.xml:80:13-52
+92            android:description="@string/demo_description_indoor_map"
+92-->C:\Users\Haoyu\Desktop\demo\TencentMapSDK_Android_3D_v5.1.0\TencentMapDemo_Android-master\app\src\main\AndroidManifest.xml:81:13-70
+93            android:label="@string/demo_label_indoor_map" >
+93-->C:\Users\Haoyu\Desktop\demo\TencentMapSDK_Android_3D_v5.1.0\TencentMapDemo_Android-master\app\src\main\AndroidManifest.xml:82:13-58
+94            <meta-data
+94-->C:\Users\Haoyu\Desktop\demo\TencentMapSDK_Android_3D_v5.1.0\TencentMapDemo_Android-master\app\src\main\AndroidManifest.xml:43:13-45:59
+95                android:name="@string/demo_type"
+95-->C:\Users\Haoyu\Desktop\demo\TencentMapSDK_Android_3D_v5.1.0\TencentMapDemo_Android-master\app\src\main\AndroidManifest.xml:44:17-49
+96                android:value="@string/demo_type_basic" />
+96-->C:\Users\Haoyu\Desktop\demo\TencentMapSDK_Android_3D_v5.1.0\TencentMapDemo_Android-master\app\src\main\AndroidManifest.xml:45:17-56
+97        </activity>
+98        <activity
+98-->C:\Users\Haoyu\Desktop\demo\TencentMapSDK_Android_3D_v5.1.0\TencentMapDemo_Android-master\app\src\main\AndroidManifest.xml:87:9-94:20
+99            android:name="com.tencent.map.vector.demo.basic.OverseaMapActivity"
+99-->C:\Users\Haoyu\Desktop\demo\TencentMapSDK_Android_3D_v5.1.0\TencentMapDemo_Android-master\app\src\main\AndroidManifest.xml:88:13-53
+100            android:description="@string/demo_description_oversea"
+100-->C:\Users\Haoyu\Desktop\demo\TencentMapSDK_Android_3D_v5.1.0\TencentMapDemo_Android-master\app\src\main\AndroidManifest.xml:89:13-67
+101            android:label="@string/demo_label_oversea" >
+101-->C:\Users\Haoyu\Desktop\demo\TencentMapSDK_Android_3D_v5.1.0\TencentMapDemo_Android-master\app\src\main\AndroidManifest.xml:90:13-55
+102            <meta-data
+102-->C:\Users\Haoyu\Desktop\demo\TencentMapSDK_Android_3D_v5.1.0\TencentMapDemo_Android-master\app\src\main\AndroidManifest.xml:43:13-45:59
+103                android:name="@string/demo_type"
+103-->C:\Users\Haoyu\Desktop\demo\TencentMapSDK_Android_3D_v5.1.0\TencentMapDemo_Android-master\app\src\main\AndroidManifest.xml:44:17-49
+104                android:value="@string/demo_type_basic" />
+104-->C:\Users\Haoyu\Desktop\demo\TencentMapSDK_Android_3D_v5.1.0\TencentMapDemo_Android-master\app\src\main\AndroidManifest.xml:45:17-56
+105        </activity>
+106        <activity
+106-->C:\Users\Haoyu\Desktop\demo\TencentMapSDK_Android_3D_v5.1.0\TencentMapDemo_Android-master\app\src\main\AndroidManifest.xml:95:9-102:20
+107            android:name="com.tencent.map.vector.demo.basic.MapStyleDemoActivity"
+107-->C:\Users\Haoyu\Desktop\demo\TencentMapSDK_Android_3D_v5.1.0\TencentMapDemo_Android-master\app\src\main\AndroidManifest.xml:96:13-55
+108            android:description="@string/demo_description_style"
+108-->C:\Users\Haoyu\Desktop\demo\TencentMapSDK_Android_3D_v5.1.0\TencentMapDemo_Android-master\app\src\main\AndroidManifest.xml:97:13-65
+109            android:label="@string/demo_label_style" >
+109-->C:\Users\Haoyu\Desktop\demo\TencentMapSDK_Android_3D_v5.1.0\TencentMapDemo_Android-master\app\src\main\AndroidManifest.xml:98:13-53
+110            <meta-data
+110-->C:\Users\Haoyu\Desktop\demo\TencentMapSDK_Android_3D_v5.1.0\TencentMapDemo_Android-master\app\src\main\AndroidManifest.xml:43:13-45:59
+111                android:name="@string/demo_type"
+111-->C:\Users\Haoyu\Desktop\demo\TencentMapSDK_Android_3D_v5.1.0\TencentMapDemo_Android-master\app\src\main\AndroidManifest.xml:44:17-49
+112                android:value="@string/demo_type_basic" />
+112-->C:\Users\Haoyu\Desktop\demo\TencentMapSDK_Android_3D_v5.1.0\TencentMapDemo_Android-master\app\src\main\AndroidManifest.xml:45:17-56
+113        </activity>
+114        <activity
+114-->C:\Users\Haoyu\Desktop\demo\TencentMapSDK_Android_3D_v5.1.0\TencentMapDemo_Android-master\app\src\main\AndroidManifest.xml:103:9-110:20
+115            android:name="com.tencent.map.vector.demo.basic.UiSettingsActivity"
+115-->C:\Users\Haoyu\Desktop\demo\TencentMapSDK_Android_3D_v5.1.0\TencentMapDemo_Android-master\app\src\main\AndroidManifest.xml:104:13-53
+116            android:description="@string/demo_description_ui"
+116-->C:\Users\Haoyu\Desktop\demo\TencentMapSDK_Android_3D_v5.1.0\TencentMapDemo_Android-master\app\src\main\AndroidManifest.xml:105:13-62
+117            android:label="@string/demo_label_ui" >
+117-->C:\Users\Haoyu\Desktop\demo\TencentMapSDK_Android_3D_v5.1.0\TencentMapDemo_Android-master\app\src\main\AndroidManifest.xml:106:13-50
+118            <meta-data
+118-->C:\Users\Haoyu\Desktop\demo\TencentMapSDK_Android_3D_v5.1.0\TencentMapDemo_Android-master\app\src\main\AndroidManifest.xml:43:13-45:59
+119                android:name="@string/demo_type"
+119-->C:\Users\Haoyu\Desktop\demo\TencentMapSDK_Android_3D_v5.1.0\TencentMapDemo_Android-master\app\src\main\AndroidManifest.xml:44:17-49
+120                android:value="@string/demo_type_interactive" />
+120-->C:\Users\Haoyu\Desktop\demo\TencentMapSDK_Android_3D_v5.1.0\TencentMapDemo_Android-master\app\src\main\AndroidManifest.xml:45:17-56
+121        </activity>
+122        <activity
+122-->C:\Users\Haoyu\Desktop\demo\TencentMapSDK_Android_3D_v5.1.0\TencentMapDemo_Android-master\app\src\main\AndroidManifest.xml:111:9-118:20
+123            android:name="com.tencent.map.vector.demo.gesture.GestureSettingsActivity"
+123-->C:\Users\Haoyu\Desktop\demo\TencentMapSDK_Android_3D_v5.1.0\TencentMapDemo_Android-master\app\src\main\AndroidManifest.xml:112:13-60
+124            android:description="@string/demo_description_gesture"
+124-->C:\Users\Haoyu\Desktop\demo\TencentMapSDK_Android_3D_v5.1.0\TencentMapDemo_Android-master\app\src\main\AndroidManifest.xml:113:13-67
+125            android:label="@string/demo_label_gesture" >
+125-->C:\Users\Haoyu\Desktop\demo\TencentMapSDK_Android_3D_v5.1.0\TencentMapDemo_Android-master\app\src\main\AndroidManifest.xml:114:13-55
+126            <meta-data
+126-->C:\Users\Haoyu\Desktop\demo\TencentMapSDK_Android_3D_v5.1.0\TencentMapDemo_Android-master\app\src\main\AndroidManifest.xml:43:13-45:59
+127                android:name="@string/demo_type"
+127-->C:\Users\Haoyu\Desktop\demo\TencentMapSDK_Android_3D_v5.1.0\TencentMapDemo_Android-master\app\src\main\AndroidManifest.xml:44:17-49
+128                android:value="@string/demo_type_interactive" />
+128-->C:\Users\Haoyu\Desktop\demo\TencentMapSDK_Android_3D_v5.1.0\TencentMapDemo_Android-master\app\src\main\AndroidManifest.xml:45:17-56
+129        </activity>
+130        <activity
+130-->C:\Users\Haoyu\Desktop\demo\TencentMapSDK_Android_3D_v5.1.0\TencentMapDemo_Android-master\app\src\main\AndroidManifest.xml:119:9-126:20
+131            android:name="com.tencent.map.vector.demo.transaction.ZoomMapActivity"
+131-->C:\Users\Haoyu\Desktop\demo\TencentMapSDK_Android_3D_v5.1.0\TencentMapDemo_Android-master\app\src\main\AndroidManifest.xml:120:13-56
+132            android:description="@string/demo_description_modify_zoom"
+132-->C:\Users\Haoyu\Desktop\demo\TencentMapSDK_Android_3D_v5.1.0\TencentMapDemo_Android-master\app\src\main\AndroidManifest.xml:121:13-71
+133            android:label="@string/demo_label_modify_zoom" >
+133-->C:\Users\Haoyu\Desktop\demo\TencentMapSDK_Android_3D_v5.1.0\TencentMapDemo_Android-master\app\src\main\AndroidManifest.xml:122:13-59
+134            <meta-data
+134-->C:\Users\Haoyu\Desktop\demo\TencentMapSDK_Android_3D_v5.1.0\TencentMapDemo_Android-master\app\src\main\AndroidManifest.xml:43:13-45:59
+135                android:name="@string/demo_type"
+135-->C:\Users\Haoyu\Desktop\demo\TencentMapSDK_Android_3D_v5.1.0\TencentMapDemo_Android-master\app\src\main\AndroidManifest.xml:44:17-49
+136                android:value="@string/demo_type_interactive" />
+136-->C:\Users\Haoyu\Desktop\demo\TencentMapSDK_Android_3D_v5.1.0\TencentMapDemo_Android-master\app\src\main\AndroidManifest.xml:45:17-56
+137        </activity>
+138        <activity
+138-->C:\Users\Haoyu\Desktop\demo\TencentMapSDK_Android_3D_v5.1.0\TencentMapDemo_Android-master\app\src\main\AndroidManifest.xml:127:9-134:20
+139            android:name="com.tencent.map.vector.demo.camera.MapCameraCenterActivity"
+139-->C:\Users\Haoyu\Desktop\demo\TencentMapSDK_Android_3D_v5.1.0\TencentMapDemo_Android-master\app\src\main\AndroidManifest.xml:128:13-59
+140            android:description="@string/demo_description_modify_map_center"
+140-->C:\Users\Haoyu\Desktop\demo\TencentMapSDK_Android_3D_v5.1.0\TencentMapDemo_Android-master\app\src\main\AndroidManifest.xml:129:13-77
+141            android:label="@string/demo_label_modify_map_center" >
+141-->C:\Users\Haoyu\Desktop\demo\TencentMapSDK_Android_3D_v5.1.0\TencentMapDemo_Android-master\app\src\main\AndroidManifest.xml:130:13-65
+142            <meta-data
+142-->C:\Users\Haoyu\Desktop\demo\TencentMapSDK_Android_3D_v5.1.0\TencentMapDemo_Android-master\app\src\main\AndroidManifest.xml:43:13-45:59
+143                android:name="@string/demo_type"
+143-->C:\Users\Haoyu\Desktop\demo\TencentMapSDK_Android_3D_v5.1.0\TencentMapDemo_Android-master\app\src\main\AndroidManifest.xml:44:17-49
+144                android:value="@string/demo_type_interactive" />
+144-->C:\Users\Haoyu\Desktop\demo\TencentMapSDK_Android_3D_v5.1.0\TencentMapDemo_Android-master\app\src\main\AndroidManifest.xml:45:17-56
+145        </activity>
+146        <activity
+146-->C:\Users\Haoyu\Desktop\demo\TencentMapSDK_Android_3D_v5.1.0\TencentMapDemo_Android-master\app\src\main\AndroidManifest.xml:135:9-142:20
+147            android:name="com.tencent.map.vector.demo.camera.MapBoundActivity"
+147-->C:\Users\Haoyu\Desktop\demo\TencentMapSDK_Android_3D_v5.1.0\TencentMapDemo_Android-master\app\src\main\AndroidManifest.xml:136:13-52
+148            android:description="@string/demo_description_map_bound"
+148-->C:\Users\Haoyu\Desktop\demo\TencentMapSDK_Android_3D_v5.1.0\TencentMapDemo_Android-master\app\src\main\AndroidManifest.xml:137:13-69
+149            android:label="@string/demo_label_map_bound" >
+149-->C:\Users\Haoyu\Desktop\demo\TencentMapSDK_Android_3D_v5.1.0\TencentMapDemo_Android-master\app\src\main\AndroidManifest.xml:138:13-57
+150            <meta-data
+150-->C:\Users\Haoyu\Desktop\demo\TencentMapSDK_Android_3D_v5.1.0\TencentMapDemo_Android-master\app\src\main\AndroidManifest.xml:43:13-45:59
+151                android:name="@string/demo_type"
+151-->C:\Users\Haoyu\Desktop\demo\TencentMapSDK_Android_3D_v5.1.0\TencentMapDemo_Android-master\app\src\main\AndroidManifest.xml:44:17-49
+152                android:value="@string/demo_type_interactive" />
+152-->C:\Users\Haoyu\Desktop\demo\TencentMapSDK_Android_3D_v5.1.0\TencentMapDemo_Android-master\app\src\main\AndroidManifest.xml:45:17-56
+153        </activity>
+154        <activity
+154-->C:\Users\Haoyu\Desktop\demo\TencentMapSDK_Android_3D_v5.1.0\TencentMapDemo_Android-master\app\src\main\AndroidManifest.xml:143:9-150:20
+155            android:name="com.tencent.map.vector.demo.poi.PoiClickActivity"
+155-->C:\Users\Haoyu\Desktop\demo\TencentMapSDK_Android_3D_v5.1.0\TencentMapDemo_Android-master\app\src\main\AndroidManifest.xml:144:13-49
+156            android:description="@string/demo_description_click_poi"
+156-->C:\Users\Haoyu\Desktop\demo\TencentMapSDK_Android_3D_v5.1.0\TencentMapDemo_Android-master\app\src\main\AndroidManifest.xml:145:13-69
+157            android:label="@string/demo_label_click_poi" >
+157-->C:\Users\Haoyu\Desktop\demo\TencentMapSDK_Android_3D_v5.1.0\TencentMapDemo_Android-master\app\src\main\AndroidManifest.xml:146:13-57
+158            <meta-data
+158-->C:\Users\Haoyu\Desktop\demo\TencentMapSDK_Android_3D_v5.1.0\TencentMapDemo_Android-master\app\src\main\AndroidManifest.xml:43:13-45:59
+159                android:name="@string/demo_type"
+159-->C:\Users\Haoyu\Desktop\demo\TencentMapSDK_Android_3D_v5.1.0\TencentMapDemo_Android-master\app\src\main\AndroidManifest.xml:44:17-49
+160                android:value="@string/demo_type_interactive" />
+160-->C:\Users\Haoyu\Desktop\demo\TencentMapSDK_Android_3D_v5.1.0\TencentMapDemo_Android-master\app\src\main\AndroidManifest.xml:45:17-56
+161        </activity>
+162        <activity
+162-->C:\Users\Haoyu\Desktop\demo\TencentMapSDK_Android_3D_v5.1.0\TencentMapDemo_Android-master\app\src\main\AndroidManifest.xml:151:9-158:20
+163            android:name="com.tencent.map.vector.demo.transaction.AnimateCameraActivity"
+163-->C:\Users\Haoyu\Desktop\demo\TencentMapSDK_Android_3D_v5.1.0\TencentMapDemo_Android-master\app\src\main\AndroidManifest.xml:152:13-62
+164            android:description="@string/demo_description_animate_camera"
+164-->C:\Users\Haoyu\Desktop\demo\TencentMapSDK_Android_3D_v5.1.0\TencentMapDemo_Android-master\app\src\main\AndroidManifest.xml:153:13-74
+165            android:label="@string/demo_label_animate_camera" >
+165-->C:\Users\Haoyu\Desktop\demo\TencentMapSDK_Android_3D_v5.1.0\TencentMapDemo_Android-master\app\src\main\AndroidManifest.xml:154:13-62
+166            <meta-data
+166-->C:\Users\Haoyu\Desktop\demo\TencentMapSDK_Android_3D_v5.1.0\TencentMapDemo_Android-master\app\src\main\AndroidManifest.xml:43:13-45:59
+167                android:name="@string/demo_type"
+167-->C:\Users\Haoyu\Desktop\demo\TencentMapSDK_Android_3D_v5.1.0\TencentMapDemo_Android-master\app\src\main\AndroidManifest.xml:44:17-49
+168                android:value="@string/demo_type_interactive" />
+168-->C:\Users\Haoyu\Desktop\demo\TencentMapSDK_Android_3D_v5.1.0\TencentMapDemo_Android-master\app\src\main\AndroidManifest.xml:45:17-56
+169        </activity>
+170        <activity
+170-->C:\Users\Haoyu\Desktop\demo\TencentMapSDK_Android_3D_v5.1.0\TencentMapDemo_Android-master\app\src\main\AndroidManifest.xml:159:9-166:20
+171            android:name="com.tencent.map.vector.demo.camera.MapAnchorZoomActivity"
+171-->C:\Users\Haoyu\Desktop\demo\TencentMapSDK_Android_3D_v5.1.0\TencentMapDemo_Android-master\app\src\main\AndroidManifest.xml:160:13-57
+172            android:description="@string/demo_description_map_camera_anchor"
+172-->C:\Users\Haoyu\Desktop\demo\TencentMapSDK_Android_3D_v5.1.0\TencentMapDemo_Android-master\app\src\main\AndroidManifest.xml:161:13-77
+173            android:label="@string/demo_label_map_camera_anchor" >
+173-->C:\Users\Haoyu\Desktop\demo\TencentMapSDK_Android_3D_v5.1.0\TencentMapDemo_Android-master\app\src\main\AndroidManifest.xml:162:13-65
+174            <meta-data
+174-->C:\Users\Haoyu\Desktop\demo\TencentMapSDK_Android_3D_v5.1.0\TencentMapDemo_Android-master\app\src\main\AndroidManifest.xml:43:13-45:59
+175                android:name="@string/demo_type"
+175-->C:\Users\Haoyu\Desktop\demo\TencentMapSDK_Android_3D_v5.1.0\TencentMapDemo_Android-master\app\src\main\AndroidManifest.xml:44:17-49
+176                android:value="@string/demo_type_interactive" />
+176-->C:\Users\Haoyu\Desktop\demo\TencentMapSDK_Android_3D_v5.1.0\TencentMapDemo_Android-master\app\src\main\AndroidManifest.xml:45:17-56
+177        </activity>
+178        <activity
+178-->C:\Users\Haoyu\Desktop\demo\TencentMapSDK_Android_3D_v5.1.0\TencentMapDemo_Android-master\app\src\main\AndroidManifest.xml:167:9-174:20
+179            android:name="com.tencent.map.vector.demo.transaction.ScollMapActivity"
+179-->C:\Users\Haoyu\Desktop\demo\TencentMapSDK_Android_3D_v5.1.0\TencentMapDemo_Android-master\app\src\main\AndroidManifest.xml:168:13-57
+180            android:description="@string/demo_description_camera_translation"
+180-->C:\Users\Haoyu\Desktop\demo\TencentMapSDK_Android_3D_v5.1.0\TencentMapDemo_Android-master\app\src\main\AndroidManifest.xml:169:13-78
+181            android:label="@string/demo_label_camera_translation" >
+181-->C:\Users\Haoyu\Desktop\demo\TencentMapSDK_Android_3D_v5.1.0\TencentMapDemo_Android-master\app\src\main\AndroidManifest.xml:170:13-66
+182            <meta-data
+182-->C:\Users\Haoyu\Desktop\demo\TencentMapSDK_Android_3D_v5.1.0\TencentMapDemo_Android-master\app\src\main\AndroidManifest.xml:43:13-45:59
+183                android:name="@string/demo_type"
+183-->C:\Users\Haoyu\Desktop\demo\TencentMapSDK_Android_3D_v5.1.0\TencentMapDemo_Android-master\app\src\main\AndroidManifest.xml:44:17-49
+184                android:value="@string/demo_type_transformation" />
+184-->C:\Users\Haoyu\Desktop\demo\TencentMapSDK_Android_3D_v5.1.0\TencentMapDemo_Android-master\app\src\main\AndroidManifest.xml:45:17-56
+185        </activity>
+186        <activity
+186-->C:\Users\Haoyu\Desktop\demo\TencentMapSDK_Android_3D_v5.1.0\TencentMapDemo_Android-master\app\src\main\AndroidManifest.xml:175:9-182:20
+187            android:name="com.tencent.map.vector.demo.transaction.RotateMapActivity"
+187-->C:\Users\Haoyu\Desktop\demo\TencentMapSDK_Android_3D_v5.1.0\TencentMapDemo_Android-master\app\src\main\AndroidManifest.xml:176:13-58
+188            android:description="@string/demo_description_camera_rotation"
+188-->C:\Users\Haoyu\Desktop\demo\TencentMapSDK_Android_3D_v5.1.0\TencentMapDemo_Android-master\app\src\main\AndroidManifest.xml:177:13-75
+189            android:label="@string/demo_label_camera_rotation" >
+189-->C:\Users\Haoyu\Desktop\demo\TencentMapSDK_Android_3D_v5.1.0\TencentMapDemo_Android-master\app\src\main\AndroidManifest.xml:178:13-63
+190            <meta-data
+190-->C:\Users\Haoyu\Desktop\demo\TencentMapSDK_Android_3D_v5.1.0\TencentMapDemo_Android-master\app\src\main\AndroidManifest.xml:43:13-45:59
+191                android:name="@string/demo_type"
+191-->C:\Users\Haoyu\Desktop\demo\TencentMapSDK_Android_3D_v5.1.0\TencentMapDemo_Android-master\app\src\main\AndroidManifest.xml:44:17-49
+192                android:value="@string/demo_type_transformation" />
+192-->C:\Users\Haoyu\Desktop\demo\TencentMapSDK_Android_3D_v5.1.0\TencentMapDemo_Android-master\app\src\main\AndroidManifest.xml:45:17-56
+193        </activity>
+194        <activity
+194-->C:\Users\Haoyu\Desktop\demo\TencentMapSDK_Android_3D_v5.1.0\TencentMapDemo_Android-master\app\src\main\AndroidManifest.xml:183:9-190:20
+195            android:name="com.tencent.map.vector.demo.transaction.ZoomCalulateActivity"
+195-->C:\Users\Haoyu\Desktop\demo\TencentMapSDK_Android_3D_v5.1.0\TencentMapDemo_Android-master\app\src\main\AndroidManifest.xml:184:13-61
+196            android:description="@string/demo_description_camera_include_points"
+196-->C:\Users\Haoyu\Desktop\demo\TencentMapSDK_Android_3D_v5.1.0\TencentMapDemo_Android-master\app\src\main\AndroidManifest.xml:185:13-81
+197            android:label="@string/demo_label_camera_include_points" >
+197-->C:\Users\Haoyu\Desktop\demo\TencentMapSDK_Android_3D_v5.1.0\TencentMapDemo_Android-master\app\src\main\AndroidManifest.xml:186:13-69
+198            <meta-data
+198-->C:\Users\Haoyu\Desktop\demo\TencentMapSDK_Android_3D_v5.1.0\TencentMapDemo_Android-master\app\src\main\AndroidManifest.xml:43:13-45:59
+199                android:name="@string/demo_type"
+199-->C:\Users\Haoyu\Desktop\demo\TencentMapSDK_Android_3D_v5.1.0\TencentMapDemo_Android-master\app\src\main\AndroidManifest.xml:44:17-49
+200                android:value="@string/demo_type_transformation" />
+200-->C:\Users\Haoyu\Desktop\demo\TencentMapSDK_Android_3D_v5.1.0\TencentMapDemo_Android-master\app\src\main\AndroidManifest.xml:45:17-56
+201        </activity>
+202        <activity
+202-->C:\Users\Haoyu\Desktop\demo\TencentMapSDK_Android_3D_v5.1.0\TencentMapDemo_Android-master\app\src\main\AndroidManifest.xml:191:9-198:20
+203            android:name="com.tencent.map.vector.demo.transaction.MoveCameraActivity"
+203-->C:\Users\Haoyu\Desktop\demo\TencentMapSDK_Android_3D_v5.1.0\TencentMapDemo_Android-master\app\src\main\AndroidManifest.xml:192:13-59
+204            android:description="@string/demo_description_camera_change_listener"
+204-->C:\Users\Haoyu\Desktop\demo\TencentMapSDK_Android_3D_v5.1.0\TencentMapDemo_Android-master\app\src\main\AndroidManifest.xml:193:13-82
+205            android:label="@string/demo_label_camera_change_listener" >
+205-->C:\Users\Haoyu\Desktop\demo\TencentMapSDK_Android_3D_v5.1.0\TencentMapDemo_Android-master\app\src\main\AndroidManifest.xml:194:13-70
+206            <meta-data
+206-->C:\Users\Haoyu\Desktop\demo\TencentMapSDK_Android_3D_v5.1.0\TencentMapDemo_Android-master\app\src\main\AndroidManifest.xml:43:13-45:59
+207                android:name="@string/demo_type"
+207-->C:\Users\Haoyu\Desktop\demo\TencentMapSDK_Android_3D_v5.1.0\TencentMapDemo_Android-master\app\src\main\AndroidManifest.xml:44:17-49
+208                android:value="@string/demo_type_transformation" />
+208-->C:\Users\Haoyu\Desktop\demo\TencentMapSDK_Android_3D_v5.1.0\TencentMapDemo_Android-master\app\src\main\AndroidManifest.xml:45:17-56
+209        </activity>
+210        <activity
+210-->C:\Users\Haoyu\Desktop\demo\TencentMapSDK_Android_3D_v5.1.0\TencentMapDemo_Android-master\app\src\main\AndroidManifest.xml:199:9-206:20
+211            android:name="com.tencent.map.vector.demo.gesture.MapListenActivity"
+211-->C:\Users\Haoyu\Desktop\demo\TencentMapSDK_Android_3D_v5.1.0\TencentMapDemo_Android-master\app\src\main\AndroidManifest.xml:200:13-54
+212            android:description="@string/demo_description_map_click_listener"
+212-->C:\Users\Haoyu\Desktop\demo\TencentMapSDK_Android_3D_v5.1.0\TencentMapDemo_Android-master\app\src\main\AndroidManifest.xml:201:13-78
+213            android:label="@string/demo_label_map_click_listener" >
+213-->C:\Users\Haoyu\Desktop\demo\TencentMapSDK_Android_3D_v5.1.0\TencentMapDemo_Android-master\app\src\main\AndroidManifest.xml:202:13-66
+214            <meta-data
+214-->C:\Users\Haoyu\Desktop\demo\TencentMapSDK_Android_3D_v5.1.0\TencentMapDemo_Android-master\app\src\main\AndroidManifest.xml:43:13-45:59
+215                android:name="@string/demo_type"
+215-->C:\Users\Haoyu\Desktop\demo\TencentMapSDK_Android_3D_v5.1.0\TencentMapDemo_Android-master\app\src\main\AndroidManifest.xml:44:17-49
+216                android:value="@string/demo_type_transformation" />
+216-->C:\Users\Haoyu\Desktop\demo\TencentMapSDK_Android_3D_v5.1.0\TencentMapDemo_Android-master\app\src\main\AndroidManifest.xml:45:17-56
+217        </activity>
+218        <activity
+218-->C:\Users\Haoyu\Desktop\demo\TencentMapSDK_Android_3D_v5.1.0\TencentMapDemo_Android-master\app\src\main\AndroidManifest.xml:207:9-214:20
+219            android:name="com.tencent.map.vector.demo.gesture.MapLongClickActivity"
+219-->C:\Users\Haoyu\Desktop\demo\TencentMapSDK_Android_3D_v5.1.0\TencentMapDemo_Android-master\app\src\main\AndroidManifest.xml:208:13-57
+220            android:description="@string/demo_description_map_long_click_listener"
+220-->C:\Users\Haoyu\Desktop\demo\TencentMapSDK_Android_3D_v5.1.0\TencentMapDemo_Android-master\app\src\main\AndroidManifest.xml:209:13-83
+221            android:label="@string/demo_label_map_long_click_listener" >
+221-->C:\Users\Haoyu\Desktop\demo\TencentMapSDK_Android_3D_v5.1.0\TencentMapDemo_Android-master\app\src\main\AndroidManifest.xml:210:13-71
+222            <meta-data
+222-->C:\Users\Haoyu\Desktop\demo\TencentMapSDK_Android_3D_v5.1.0\TencentMapDemo_Android-master\app\src\main\AndroidManifest.xml:43:13-45:59
+223                android:name="@string/demo_type"
+223-->C:\Users\Haoyu\Desktop\demo\TencentMapSDK_Android_3D_v5.1.0\TencentMapDemo_Android-master\app\src\main\AndroidManifest.xml:44:17-49
+224                android:value="@string/demo_type_transformation" />
+224-->C:\Users\Haoyu\Desktop\demo\TencentMapSDK_Android_3D_v5.1.0\TencentMapDemo_Android-master\app\src\main\AndroidManifest.xml:45:17-56
+225        </activity> <!-- 标注 -->
+226        <activity
+226-->C:\Users\Haoyu\Desktop\demo\TencentMapSDK_Android_3D_v5.1.0\TencentMapDemo_Android-master\app\src\main\AndroidManifest.xml:215:9-222:20
+227            android:name="com.tencent.map.vector.demo.marker.SimpleMarkerActivity"
+227-->C:\Users\Haoyu\Desktop\demo\TencentMapSDK_Android_3D_v5.1.0\TencentMapDemo_Android-master\app\src\main\AndroidManifest.xml:216:13-56
+228            android:description="@string/demo_description_simple_marker"
+228-->C:\Users\Haoyu\Desktop\demo\TencentMapSDK_Android_3D_v5.1.0\TencentMapDemo_Android-master\app\src\main\AndroidManifest.xml:217:13-73
+229            android:label="@string/demo_label_simple_marker" >
+229-->C:\Users\Haoyu\Desktop\demo\TencentMapSDK_Android_3D_v5.1.0\TencentMapDemo_Android-master\app\src\main\AndroidManifest.xml:218:13-61
+230            <meta-data
+230-->C:\Users\Haoyu\Desktop\demo\TencentMapSDK_Android_3D_v5.1.0\TencentMapDemo_Android-master\app\src\main\AndroidManifest.xml:43:13-45:59
+231                android:name="@string/demo_type"
+231-->C:\Users\Haoyu\Desktop\demo\TencentMapSDK_Android_3D_v5.1.0\TencentMapDemo_Android-master\app\src\main\AndroidManifest.xml:44:17-49
+232                android:value="@string/demo_type_marker" />
+232-->C:\Users\Haoyu\Desktop\demo\TencentMapSDK_Android_3D_v5.1.0\TencentMapDemo_Android-master\app\src\main\AndroidManifest.xml:45:17-56
+233        </activity>
+234        <activity
+234-->C:\Users\Haoyu\Desktop\demo\TencentMapSDK_Android_3D_v5.1.0\TencentMapDemo_Android-master\app\src\main\AndroidManifest.xml:223:9-230:20
+235            android:name="com.tencent.map.vector.demo.marker.MarkerCollisions"
+235-->C:\Users\Haoyu\Desktop\demo\TencentMapSDK_Android_3D_v5.1.0\TencentMapDemo_Android-master\app\src\main\AndroidManifest.xml:224:13-52
+236            android:description="@string/demo_description_collisions_marker"
+236-->C:\Users\Haoyu\Desktop\demo\TencentMapSDK_Android_3D_v5.1.0\TencentMapDemo_Android-master\app\src\main\AndroidManifest.xml:225:13-77
+237            android:label="@string/demo_label_collisions_marker" >
+237-->C:\Users\Haoyu\Desktop\demo\TencentMapSDK_Android_3D_v5.1.0\TencentMapDemo_Android-master\app\src\main\AndroidManifest.xml:226:13-65
+238            <meta-data
+238-->C:\Users\Haoyu\Desktop\demo\TencentMapSDK_Android_3D_v5.1.0\TencentMapDemo_Android-master\app\src\main\AndroidManifest.xml:43:13-45:59
+239                android:name="@string/demo_type"
+239-->C:\Users\Haoyu\Desktop\demo\TencentMapSDK_Android_3D_v5.1.0\TencentMapDemo_Android-master\app\src\main\AndroidManifest.xml:44:17-49
+240                android:value="@string/demo_type_marker" />
+240-->C:\Users\Haoyu\Desktop\demo\TencentMapSDK_Android_3D_v5.1.0\TencentMapDemo_Android-master\app\src\main\AndroidManifest.xml:45:17-56
+241        </activity>
+242        <activity
+242-->C:\Users\Haoyu\Desktop\demo\TencentMapSDK_Android_3D_v5.1.0\TencentMapDemo_Android-master\app\src\main\AndroidManifest.xml:231:9-238:20
+243            android:name="com.tencent.map.vector.demo.marker.MarkerOptionsActivity"
+243-->C:\Users\Haoyu\Desktop\demo\TencentMapSDK_Android_3D_v5.1.0\TencentMapDemo_Android-master\app\src\main\AndroidManifest.xml:232:13-57
+244            android:description="@string/demo_description_marker_options"
+244-->C:\Users\Haoyu\Desktop\demo\TencentMapSDK_Android_3D_v5.1.0\TencentMapDemo_Android-master\app\src\main\AndroidManifest.xml:233:13-74
+245            android:label="@string/demo_label_marker_options" >
+245-->C:\Users\Haoyu\Desktop\demo\TencentMapSDK_Android_3D_v5.1.0\TencentMapDemo_Android-master\app\src\main\AndroidManifest.xml:234:13-62
+246            <meta-data
+246-->C:\Users\Haoyu\Desktop\demo\TencentMapSDK_Android_3D_v5.1.0\TencentMapDemo_Android-master\app\src\main\AndroidManifest.xml:43:13-45:59
+247                android:name="@string/demo_type"
+247-->C:\Users\Haoyu\Desktop\demo\TencentMapSDK_Android_3D_v5.1.0\TencentMapDemo_Android-master\app\src\main\AndroidManifest.xml:44:17-49
+248                android:value="@string/demo_type_marker" />
+248-->C:\Users\Haoyu\Desktop\demo\TencentMapSDK_Android_3D_v5.1.0\TencentMapDemo_Android-master\app\src\main\AndroidManifest.xml:45:17-56
+249        </activity>
+250        <activity
+250-->C:\Users\Haoyu\Desktop\demo\TencentMapSDK_Android_3D_v5.1.0\TencentMapDemo_Android-master\app\src\main\AndroidManifest.xml:239:9-246:20
+251            android:name="com.tencent.map.vector.demo.marker.MarkerClickActivity"
+251-->C:\Users\Haoyu\Desktop\demo\TencentMapSDK_Android_3D_v5.1.0\TencentMapDemo_Android-master\app\src\main\AndroidManifest.xml:240:13-55
+252            android:description="@string/demo_description_marker_click_listener"
+252-->C:\Users\Haoyu\Desktop\demo\TencentMapSDK_Android_3D_v5.1.0\TencentMapDemo_Android-master\app\src\main\AndroidManifest.xml:241:13-81
+253            android:label="@string/demo_label_marker_click_listener" >
+253-->C:\Users\Haoyu\Desktop\demo\TencentMapSDK_Android_3D_v5.1.0\TencentMapDemo_Android-master\app\src\main\AndroidManifest.xml:242:13-69
+254            <meta-data
+254-->C:\Users\Haoyu\Desktop\demo\TencentMapSDK_Android_3D_v5.1.0\TencentMapDemo_Android-master\app\src\main\AndroidManifest.xml:43:13-45:59
+255                android:name="@string/demo_type"
+255-->C:\Users\Haoyu\Desktop\demo\TencentMapSDK_Android_3D_v5.1.0\TencentMapDemo_Android-master\app\src\main\AndroidManifest.xml:44:17-49
+256                android:value="@string/demo_type_marker" />
+256-->C:\Users\Haoyu\Desktop\demo\TencentMapSDK_Android_3D_v5.1.0\TencentMapDemo_Android-master\app\src\main\AndroidManifest.xml:45:17-56
+257        </activity>
+258        <activity
+258-->C:\Users\Haoyu\Desktop\demo\TencentMapSDK_Android_3D_v5.1.0\TencentMapDemo_Android-master\app\src\main\AndroidManifest.xml:247:9-254:20
+259            android:name="com.tencent.map.vector.demo.marker.MarkerDragActivity"
+259-->C:\Users\Haoyu\Desktop\demo\TencentMapSDK_Android_3D_v5.1.0\TencentMapDemo_Android-master\app\src\main\AndroidManifest.xml:248:13-54
+260            android:description="@string/demo_description_marker_drag_listener"
+260-->C:\Users\Haoyu\Desktop\demo\TencentMapSDK_Android_3D_v5.1.0\TencentMapDemo_Android-master\app\src\main\AndroidManifest.xml:249:13-80
+261            android:label="@string/demo_label_marker_drag_listener" >
+261-->C:\Users\Haoyu\Desktop\demo\TencentMapSDK_Android_3D_v5.1.0\TencentMapDemo_Android-master\app\src\main\AndroidManifest.xml:250:13-68
+262            <meta-data
+262-->C:\Users\Haoyu\Desktop\demo\TencentMapSDK_Android_3D_v5.1.0\TencentMapDemo_Android-master\app\src\main\AndroidManifest.xml:43:13-45:59
+263                android:name="@string/demo_type"
+263-->C:\Users\Haoyu\Desktop\demo\TencentMapSDK_Android_3D_v5.1.0\TencentMapDemo_Android-master\app\src\main\AndroidManifest.xml:44:17-49
+264                android:value="@string/demo_type_marker" />
+264-->C:\Users\Haoyu\Desktop\demo\TencentMapSDK_Android_3D_v5.1.0\TencentMapDemo_Android-master\app\src\main\AndroidManifest.xml:45:17-56
+265        </activity>
+266        <activity
+266-->C:\Users\Haoyu\Desktop\demo\TencentMapSDK_Android_3D_v5.1.0\TencentMapDemo_Android-master\app\src\main\AndroidManifest.xml:255:9-262:20
+267            android:name="com.tencent.map.vector.demo.marker.MarkerInfoWindowActivity"
+267-->C:\Users\Haoyu\Desktop\demo\TencentMapSDK_Android_3D_v5.1.0\TencentMapDemo_Android-master\app\src\main\AndroidManifest.xml:256:13-60
+268            android:description="@string/demo_description_infowindow_click_listener"
+268-->C:\Users\Haoyu\Desktop\demo\TencentMapSDK_Android_3D_v5.1.0\TencentMapDemo_Android-master\app\src\main\AndroidManifest.xml:257:13-85
+269            android:label="@string/demo_label_infowindow_click_listener" >
+269-->C:\Users\Haoyu\Desktop\demo\TencentMapSDK_Android_3D_v5.1.0\TencentMapDemo_Android-master\app\src\main\AndroidManifest.xml:258:13-73
+270            <meta-data
+270-->C:\Users\Haoyu\Desktop\demo\TencentMapSDK_Android_3D_v5.1.0\TencentMapDemo_Android-master\app\src\main\AndroidManifest.xml:43:13-45:59
+271                android:name="@string/demo_type"
+271-->C:\Users\Haoyu\Desktop\demo\TencentMapSDK_Android_3D_v5.1.0\TencentMapDemo_Android-master\app\src\main\AndroidManifest.xml:44:17-49
+272                android:value="@string/demo_type_marker" />
+272-->C:\Users\Haoyu\Desktop\demo\TencentMapSDK_Android_3D_v5.1.0\TencentMapDemo_Android-master\app\src\main\AndroidManifest.xml:45:17-56
+273        </activity>
+274        <activity
+274-->C:\Users\Haoyu\Desktop\demo\TencentMapSDK_Android_3D_v5.1.0\TencentMapDemo_Android-master\app\src\main\AndroidManifest.xml:263:9-270:20
+275            android:name="com.tencent.map.vector.demo.marker.MarkerClusterActivity"
+275-->C:\Users\Haoyu\Desktop\demo\TencentMapSDK_Android_3D_v5.1.0\TencentMapDemo_Android-master\app\src\main\AndroidManifest.xml:264:13-57
+276            android:description="@string/demo_description_marker_cluster"
+276-->C:\Users\Haoyu\Desktop\demo\TencentMapSDK_Android_3D_v5.1.0\TencentMapDemo_Android-master\app\src\main\AndroidManifest.xml:265:13-74
+277            android:label="@string/demo_label_marker_cluster" >
+277-->C:\Users\Haoyu\Desktop\demo\TencentMapSDK_Android_3D_v5.1.0\TencentMapDemo_Android-master\app\src\main\AndroidManifest.xml:266:13-62
+278            <meta-data
+278-->C:\Users\Haoyu\Desktop\demo\TencentMapSDK_Android_3D_v5.1.0\TencentMapDemo_Android-master\app\src\main\AndroidManifest.xml:43:13-45:59
+279                android:name="@string/demo_type"
+279-->C:\Users\Haoyu\Desktop\demo\TencentMapSDK_Android_3D_v5.1.0\TencentMapDemo_Android-master\app\src\main\AndroidManifest.xml:44:17-49
+280                android:value="@string/demo_type_marker" />
+280-->C:\Users\Haoyu\Desktop\demo\TencentMapSDK_Android_3D_v5.1.0\TencentMapDemo_Android-master\app\src\main\AndroidManifest.xml:45:17-56
+281        </activity>
+282        <activity
+282-->C:\Users\Haoyu\Desktop\demo\TencentMapSDK_Android_3D_v5.1.0\TencentMapDemo_Android-master\app\src\main\AndroidManifest.xml:271:9-278:20
+283            android:name="com.tencent.map.vector.demo.marker.MarkerAnimation"
+283-->C:\Users\Haoyu\Desktop\demo\TencentMapSDK_Android_3D_v5.1.0\TencentMapDemo_Android-master\app\src\main\AndroidManifest.xml:272:13-51
+284            android:description="@string/demo_description_marker_animation"
+284-->C:\Users\Haoyu\Desktop\demo\TencentMapSDK_Android_3D_v5.1.0\TencentMapDemo_Android-master\app\src\main\AndroidManifest.xml:273:13-76
+285            android:label="@string/demo_label_marker_animation" >
+285-->C:\Users\Haoyu\Desktop\demo\TencentMapSDK_Android_3D_v5.1.0\TencentMapDemo_Android-master\app\src\main\AndroidManifest.xml:274:13-64
+286            <meta-data
+286-->C:\Users\Haoyu\Desktop\demo\TencentMapSDK_Android_3D_v5.1.0\TencentMapDemo_Android-master\app\src\main\AndroidManifest.xml:43:13-45:59
+287                android:name="@string/demo_type"
+287-->C:\Users\Haoyu\Desktop\demo\TencentMapSDK_Android_3D_v5.1.0\TencentMapDemo_Android-master\app\src\main\AndroidManifest.xml:44:17-49
+288                android:value="@string/demo_type_marker" />
+288-->C:\Users\Haoyu\Desktop\demo\TencentMapSDK_Android_3D_v5.1.0\TencentMapDemo_Android-master\app\src\main\AndroidManifest.xml:45:17-56
+289        </activity>
+290        <activity
+290-->C:\Users\Haoyu\Desktop\demo\TencentMapSDK_Android_3D_v5.1.0\TencentMapDemo_Android-master\app\src\main\AndroidManifest.xml:279:9-286:20
+291            android:name="com.tencent.map.vector.demo.heatoverlay.DrawHeatOverlayActivity"
+291-->C:\Users\Haoyu\Desktop\demo\TencentMapSDK_Android_3D_v5.1.0\TencentMapDemo_Android-master\app\src\main\AndroidManifest.xml:280:13-64
+292            android:description="@string/demo_description_heat_map"
+292-->C:\Users\Haoyu\Desktop\demo\TencentMapSDK_Android_3D_v5.1.0\TencentMapDemo_Android-master\app\src\main\AndroidManifest.xml:281:13-68
+293            android:label="@string/demo_label_heat_map" >
+293-->C:\Users\Haoyu\Desktop\demo\TencentMapSDK_Android_3D_v5.1.0\TencentMapDemo_Android-master\app\src\main\AndroidManifest.xml:282:13-56
+294            <meta-data
+294-->C:\Users\Haoyu\Desktop\demo\TencentMapSDK_Android_3D_v5.1.0\TencentMapDemo_Android-master\app\src\main\AndroidManifest.xml:43:13-45:59
+295                android:name="@string/demo_type"
+295-->C:\Users\Haoyu\Desktop\demo\TencentMapSDK_Android_3D_v5.1.0\TencentMapDemo_Android-master\app\src\main\AndroidManifest.xml:44:17-49
+296                android:value="@string/demo_type_draw" />
+296-->C:\Users\Haoyu\Desktop\demo\TencentMapSDK_Android_3D_v5.1.0\TencentMapDemo_Android-master\app\src\main\AndroidManifest.xml:45:17-56
+297        </activity>
+298        <activity
+298-->C:\Users\Haoyu\Desktop\demo\TencentMapSDK_Android_3D_v5.1.0\TencentMapDemo_Android-master\app\src\main\AndroidManifest.xml:287:9-294:20
+299            android:name="com.tencent.map.vector.demo.polygon.TileOverlayActivity"
+299-->C:\Users\Haoyu\Desktop\demo\TencentMapSDK_Android_3D_v5.1.0\TencentMapDemo_Android-master\app\src\main\AndroidManifest.xml:288:13-56
+300            android:description="@string/demo_description_tileOverlay_map"
+300-->C:\Users\Haoyu\Desktop\demo\TencentMapSDK_Android_3D_v5.1.0\TencentMapDemo_Android-master\app\src\main\AndroidManifest.xml:289:13-75
+301            android:label="@string/demo_label_tileOverlay_map" >
+301-->C:\Users\Haoyu\Desktop\demo\TencentMapSDK_Android_3D_v5.1.0\TencentMapDemo_Android-master\app\src\main\AndroidManifest.xml:290:13-63
+302            <meta-data
+302-->C:\Users\Haoyu\Desktop\demo\TencentMapSDK_Android_3D_v5.1.0\TencentMapDemo_Android-master\app\src\main\AndroidManifest.xml:43:13-45:59
+303                android:name="@string/demo_type"
+303-->C:\Users\Haoyu\Desktop\demo\TencentMapSDK_Android_3D_v5.1.0\TencentMapDemo_Android-master\app\src\main\AndroidManifest.xml:44:17-49
+304                android:value="@string/demo_type_draw" />
+304-->C:\Users\Haoyu\Desktop\demo\TencentMapSDK_Android_3D_v5.1.0\TencentMapDemo_Android-master\app\src\main\AndroidManifest.xml:45:17-56
+305        </activity>
+306        <activity
+306-->C:\Users\Haoyu\Desktop\demo\TencentMapSDK_Android_3D_v5.1.0\TencentMapDemo_Android-master\app\src\main\AndroidManifest.xml:295:9-302:20
+307            android:name="com.tencent.map.vector.demo.polyline.DrawLineActivity"
+307-->C:\Users\Haoyu\Desktop\demo\TencentMapSDK_Android_3D_v5.1.0\TencentMapDemo_Android-master\app\src\main\AndroidManifest.xml:296:13-54
+308            android:description="@string/demo_description_polyline"
+308-->C:\Users\Haoyu\Desktop\demo\TencentMapSDK_Android_3D_v5.1.0\TencentMapDemo_Android-master\app\src\main\AndroidManifest.xml:297:13-68
+309            android:label="@string/demo_label_polyline" >
+309-->C:\Users\Haoyu\Desktop\demo\TencentMapSDK_Android_3D_v5.1.0\TencentMapDemo_Android-master\app\src\main\AndroidManifest.xml:298:13-56
+310            <meta-data
+310-->C:\Users\Haoyu\Desktop\demo\TencentMapSDK_Android_3D_v5.1.0\TencentMapDemo_Android-master\app\src\main\AndroidManifest.xml:43:13-45:59
+311                android:name="@string/demo_type"
+311-->C:\Users\Haoyu\Desktop\demo\TencentMapSDK_Android_3D_v5.1.0\TencentMapDemo_Android-master\app\src\main\AndroidManifest.xml:44:17-49
+312                android:value="@string/demo_type_draw" />
+312-->C:\Users\Haoyu\Desktop\demo\TencentMapSDK_Android_3D_v5.1.0\TencentMapDemo_Android-master\app\src\main\AndroidManifest.xml:45:17-56
+313        </activity>
+314        <activity
+314-->C:\Users\Haoyu\Desktop\demo\TencentMapSDK_Android_3D_v5.1.0\TencentMapDemo_Android-master\app\src\main\AndroidManifest.xml:303:9-310:20
+315            android:name="com.tencent.map.vector.demo.polyline.MutablePolylineActivity"
+315-->C:\Users\Haoyu\Desktop\demo\TencentMapSDK_Android_3D_v5.1.0\TencentMapDemo_Android-master\app\src\main\AndroidManifest.xml:304:13-61
+316            android:description="@string/demo_description_mutable_polyline"
+316-->C:\Users\Haoyu\Desktop\demo\TencentMapSDK_Android_3D_v5.1.0\TencentMapDemo_Android-master\app\src\main\AndroidManifest.xml:305:13-76
+317            android:label="@string/demo_label_mutable_polyline" >
+317-->C:\Users\Haoyu\Desktop\demo\TencentMapSDK_Android_3D_v5.1.0\TencentMapDemo_Android-master\app\src\main\AndroidManifest.xml:306:13-64
+318            <meta-data
+318-->C:\Users\Haoyu\Desktop\demo\TencentMapSDK_Android_3D_v5.1.0\TencentMapDemo_Android-master\app\src\main\AndroidManifest.xml:43:13-45:59
+319                android:name="@string/demo_type"
+319-->C:\Users\Haoyu\Desktop\demo\TencentMapSDK_Android_3D_v5.1.0\TencentMapDemo_Android-master\app\src\main\AndroidManifest.xml:44:17-49
+320                android:value="@string/demo_type_draw" />
+320-->C:\Users\Haoyu\Desktop\demo\TencentMapSDK_Android_3D_v5.1.0\TencentMapDemo_Android-master\app\src\main\AndroidManifest.xml:45:17-56
+321        </activity>
+322        <activity
+322-->C:\Users\Haoyu\Desktop\demo\TencentMapSDK_Android_3D_v5.1.0\TencentMapDemo_Android-master\app\src\main\AndroidManifest.xml:311:9-318:20
+323            android:name="com.tencent.map.vector.demo.polygon.DrawPolygonActivity"
+323-->C:\Users\Haoyu\Desktop\demo\TencentMapSDK_Android_3D_v5.1.0\TencentMapDemo_Android-master\app\src\main\AndroidManifest.xml:312:13-56
+324            android:description="@string/demo_description_polygon"
+324-->C:\Users\Haoyu\Desktop\demo\TencentMapSDK_Android_3D_v5.1.0\TencentMapDemo_Android-master\app\src\main\AndroidManifest.xml:313:13-67
+325            android:label="@string/demo_label_polygon" >
+325-->C:\Users\Haoyu\Desktop\demo\TencentMapSDK_Android_3D_v5.1.0\TencentMapDemo_Android-master\app\src\main\AndroidManifest.xml:314:13-55
+326            <meta-data
+326-->C:\Users\Haoyu\Desktop\demo\TencentMapSDK_Android_3D_v5.1.0\TencentMapDemo_Android-master\app\src\main\AndroidManifest.xml:43:13-45:59
+327                android:name="@string/demo_type"
+327-->C:\Users\Haoyu\Desktop\demo\TencentMapSDK_Android_3D_v5.1.0\TencentMapDemo_Android-master\app\src\main\AndroidManifest.xml:44:17-49
+328                android:value="@string/demo_type_draw" />
+328-->C:\Users\Haoyu\Desktop\demo\TencentMapSDK_Android_3D_v5.1.0\TencentMapDemo_Android-master\app\src\main\AndroidManifest.xml:45:17-56
+329        </activity>
+330        <activity
+330-->C:\Users\Haoyu\Desktop\demo\TencentMapSDK_Android_3D_v5.1.0\TencentMapDemo_Android-master\app\src\main\AndroidManifest.xml:319:9-326:20
+331            android:name="com.tencent.map.vector.demo.circle.DrawCircleActivity"
+331-->C:\Users\Haoyu\Desktop\demo\TencentMapSDK_Android_3D_v5.1.0\TencentMapDemo_Android-master\app\src\main\AndroidManifest.xml:320:13-54
+332            android:description="@string/demo_description_circle"
+332-->C:\Users\Haoyu\Desktop\demo\TencentMapSDK_Android_3D_v5.1.0\TencentMapDemo_Android-master\app\src\main\AndroidManifest.xml:321:13-66
+333            android:label="@string/demo_label_circle" >
+333-->C:\Users\Haoyu\Desktop\demo\TencentMapSDK_Android_3D_v5.1.0\TencentMapDemo_Android-master\app\src\main\AndroidManifest.xml:322:13-54
+334            <meta-data
+334-->C:\Users\Haoyu\Desktop\demo\TencentMapSDK_Android_3D_v5.1.0\TencentMapDemo_Android-master\app\src\main\AndroidManifest.xml:43:13-45:59
+335                android:name="@string/demo_type"
+335-->C:\Users\Haoyu\Desktop\demo\TencentMapSDK_Android_3D_v5.1.0\TencentMapDemo_Android-master\app\src\main\AndroidManifest.xml:44:17-49
+336                android:value="@string/demo_type_draw" />
+336-->C:\Users\Haoyu\Desktop\demo\TencentMapSDK_Android_3D_v5.1.0\TencentMapDemo_Android-master\app\src\main\AndroidManifest.xml:45:17-56
+337        </activity>
+338        <activity
+338-->C:\Users\Haoyu\Desktop\demo\TencentMapSDK_Android_3D_v5.1.0\TencentMapDemo_Android-master\app\src\main\AndroidManifest.xml:327:9-334:20
+339            android:name="com.tencent.map.vector.demo.circle.ArcActivity"
+339-->C:\Users\Haoyu\Desktop\demo\TencentMapSDK_Android_3D_v5.1.0\TencentMapDemo_Android-master\app\src\main\AndroidManifest.xml:328:13-47
+340            android:description="@string/demo_description_arc"
+340-->C:\Users\Haoyu\Desktop\demo\TencentMapSDK_Android_3D_v5.1.0\TencentMapDemo_Android-master\app\src\main\AndroidManifest.xml:329:13-63
+341            android:label="@string/demo_label_arc" >
+341-->C:\Users\Haoyu\Desktop\demo\TencentMapSDK_Android_3D_v5.1.0\TencentMapDemo_Android-master\app\src\main\AndroidManifest.xml:330:13-51
+342            <meta-data
+342-->C:\Users\Haoyu\Desktop\demo\TencentMapSDK_Android_3D_v5.1.0\TencentMapDemo_Android-master\app\src\main\AndroidManifest.xml:43:13-45:59
+343                android:name="@string/demo_type"
+343-->C:\Users\Haoyu\Desktop\demo\TencentMapSDK_Android_3D_v5.1.0\TencentMapDemo_Android-master\app\src\main\AndroidManifest.xml:44:17-49
+344                android:value="@string/demo_type_draw" />
+344-->C:\Users\Haoyu\Desktop\demo\TencentMapSDK_Android_3D_v5.1.0\TencentMapDemo_Android-master\app\src\main\AndroidManifest.xml:45:17-56
+345        </activity>
+346        <activity
+346-->C:\Users\Haoyu\Desktop\demo\TencentMapSDK_Android_3D_v5.1.0\TencentMapDemo_Android-master\app\src\main\AndroidManifest.xml:335:9-342:20
+347            android:name="com.tencent.map.vector.demo.search.WalkingRouteActivity"
+347-->C:\Users\Haoyu\Desktop\demo\TencentMapSDK_Android_3D_v5.1.0\TencentMapDemo_Android-master\app\src\main\AndroidManifest.xml:336:13-56
+348            android:description="@string/demo_description_walking_plan"
+348-->C:\Users\Haoyu\Desktop\demo\TencentMapSDK_Android_3D_v5.1.0\TencentMapDemo_Android-master\app\src\main\AndroidManifest.xml:337:13-72
+349            android:label="@string/demo_label_walking_plan" >
+349-->C:\Users\Haoyu\Desktop\demo\TencentMapSDK_Android_3D_v5.1.0\TencentMapDemo_Android-master\app\src\main\AndroidManifest.xml:338:13-60
+350            <meta-data
+350-->C:\Users\Haoyu\Desktop\demo\TencentMapSDK_Android_3D_v5.1.0\TencentMapDemo_Android-master\app\src\main\AndroidManifest.xml:43:13-45:59
+351                android:name="@string/demo_type"
+351-->C:\Users\Haoyu\Desktop\demo\TencentMapSDK_Android_3D_v5.1.0\TencentMapDemo_Android-master\app\src\main\AndroidManifest.xml:44:17-49
+352                android:value="@string/demo_type_route_plan" />
+352-->C:\Users\Haoyu\Desktop\demo\TencentMapSDK_Android_3D_v5.1.0\TencentMapDemo_Android-master\app\src\main\AndroidManifest.xml:45:17-56
+353        </activity>
+354        <activity
+354-->C:\Users\Haoyu\Desktop\demo\TencentMapSDK_Android_3D_v5.1.0\TencentMapDemo_Android-master\app\src\main\AndroidManifest.xml:343:9-350:20
+355            android:name="com.tencent.map.vector.demo.search.DrivingRouteActivity"
+355-->C:\Users\Haoyu\Desktop\demo\TencentMapSDK_Android_3D_v5.1.0\TencentMapDemo_Android-master\app\src\main\AndroidManifest.xml:344:13-56
+356            android:description="@string/demo_description_driving_plan"
+356-->C:\Users\Haoyu\Desktop\demo\TencentMapSDK_Android_3D_v5.1.0\TencentMapDemo_Android-master\app\src\main\AndroidManifest.xml:345:13-72
+357            android:label="@string/demo_label_driving_plan" >
+357-->C:\Users\Haoyu\Desktop\demo\TencentMapSDK_Android_3D_v5.1.0\TencentMapDemo_Android-master\app\src\main\AndroidManifest.xml:346:13-60
+358            <meta-data
+358-->C:\Users\Haoyu\Desktop\demo\TencentMapSDK_Android_3D_v5.1.0\TencentMapDemo_Android-master\app\src\main\AndroidManifest.xml:43:13-45:59
+359                android:name="@string/demo_type"
+359-->C:\Users\Haoyu\Desktop\demo\TencentMapSDK_Android_3D_v5.1.0\TencentMapDemo_Android-master\app\src\main\AndroidManifest.xml:44:17-49
+360                android:value="@string/demo_type_route_plan" />
+360-->C:\Users\Haoyu\Desktop\demo\TencentMapSDK_Android_3D_v5.1.0\TencentMapDemo_Android-master\app\src\main\AndroidManifest.xml:45:17-56
+361        </activity>
+362        <activity
+362-->C:\Users\Haoyu\Desktop\demo\TencentMapSDK_Android_3D_v5.1.0\TencentMapDemo_Android-master\app\src\main\AndroidManifest.xml:351:9-358:20
+363            android:name="com.tencent.map.vector.demo.search.TransitRouteActivity"
+363-->C:\Users\Haoyu\Desktop\demo\TencentMapSDK_Android_3D_v5.1.0\TencentMapDemo_Android-master\app\src\main\AndroidManifest.xml:352:13-56
+364            android:description="@string/demo_description_transit_plan"
+364-->C:\Users\Haoyu\Desktop\demo\TencentMapSDK_Android_3D_v5.1.0\TencentMapDemo_Android-master\app\src\main\AndroidManifest.xml:353:13-72
+365            android:label="@string/demo_label_transit_plan" >
+365-->C:\Users\Haoyu\Desktop\demo\TencentMapSDK_Android_3D_v5.1.0\TencentMapDemo_Android-master\app\src\main\AndroidManifest.xml:354:13-60
+366            <meta-data
+366-->C:\Users\Haoyu\Desktop\demo\TencentMapSDK_Android_3D_v5.1.0\TencentMapDemo_Android-master\app\src\main\AndroidManifest.xml:43:13-45:59
+367                android:name="@string/demo_type"
+367-->C:\Users\Haoyu\Desktop\demo\TencentMapSDK_Android_3D_v5.1.0\TencentMapDemo_Android-master\app\src\main\AndroidManifest.xml:44:17-49
+368                android:value="@string/demo_type_route_plan" />
+368-->C:\Users\Haoyu\Desktop\demo\TencentMapSDK_Android_3D_v5.1.0\TencentMapDemo_Android-master\app\src\main\AndroidManifest.xml:45:17-56
+369        </activity>
+370        <activity
+370-->C:\Users\Haoyu\Desktop\demo\TencentMapSDK_Android_3D_v5.1.0\TencentMapDemo_Android-master\app\src\main\AndroidManifest.xml:359:9-366:20
+371            android:name="com.tencent.map.vector.demo.search.TruckingRouteActivity"
+371-->C:\Users\Haoyu\Desktop\demo\TencentMapSDK_Android_3D_v5.1.0\TencentMapDemo_Android-master\app\src\main\AndroidManifest.xml:360:13-57
+372            android:description="@string/demo_description_truking_plan"
+372-->C:\Users\Haoyu\Desktop\demo\TencentMapSDK_Android_3D_v5.1.0\TencentMapDemo_Android-master\app\src\main\AndroidManifest.xml:361:13-72
+373            android:label="@string/demo_label_truking_plan" >
+373-->C:\Users\Haoyu\Desktop\demo\TencentMapSDK_Android_3D_v5.1.0\TencentMapDemo_Android-master\app\src\main\AndroidManifest.xml:362:13-60
+374            <meta-data
+374-->C:\Users\Haoyu\Desktop\demo\TencentMapSDK_Android_3D_v5.1.0\TencentMapDemo_Android-master\app\src\main\AndroidManifest.xml:43:13-45:59
+375                android:name="@string/demo_type"
+375-->C:\Users\Haoyu\Desktop\demo\TencentMapSDK_Android_3D_v5.1.0\TencentMapDemo_Android-master\app\src\main\AndroidManifest.xml:44:17-49
+376                android:value="@string/demo_type_route_plan" />
+376-->C:\Users\Haoyu\Desktop\demo\TencentMapSDK_Android_3D_v5.1.0\TencentMapDemo_Android-master\app\src\main\AndroidManifest.xml:45:17-56
+377        </activity>
+378        <activity
+378-->C:\Users\Haoyu\Desktop\demo\TencentMapSDK_Android_3D_v5.1.0\TencentMapDemo_Android-master\app\src\main\AndroidManifest.xml:367:9-374:20
+379            android:name="com.tencent.map.vector.demo.search.SearchBasicActivity"
+379-->C:\Users\Haoyu\Desktop\demo\TencentMapSDK_Android_3D_v5.1.0\TencentMapDemo_Android-master\app\src\main\AndroidManifest.xml:368:13-55
+380            android:description="@string/demo_description_basic_search"
+380-->C:\Users\Haoyu\Desktop\demo\TencentMapSDK_Android_3D_v5.1.0\TencentMapDemo_Android-master\app\src\main\AndroidManifest.xml:369:13-72
+381            android:label="@string/demo_label_basic_search" >
+381-->C:\Users\Haoyu\Desktop\demo\TencentMapSDK_Android_3D_v5.1.0\TencentMapDemo_Android-master\app\src\main\AndroidManifest.xml:370:13-60
+382            <meta-data
+382-->C:\Users\Haoyu\Desktop\demo\TencentMapSDK_Android_3D_v5.1.0\TencentMapDemo_Android-master\app\src\main\AndroidManifest.xml:43:13-45:59
+383                android:name="@string/demo_type"
+383-->C:\Users\Haoyu\Desktop\demo\TencentMapSDK_Android_3D_v5.1.0\TencentMapDemo_Android-master\app\src\main\AndroidManifest.xml:44:17-49
+384                android:value="@string/demo_type_search" />
+384-->C:\Users\Haoyu\Desktop\demo\TencentMapSDK_Android_3D_v5.1.0\TencentMapDemo_Android-master\app\src\main\AndroidManifest.xml:45:17-56
+385        </activity>
+386        <activity
+386-->C:\Users\Haoyu\Desktop\demo\TencentMapSDK_Android_3D_v5.1.0\TencentMapDemo_Android-master\app\src\main\AndroidManifest.xml:375:9-382:20
+387            android:name="com.tencent.map.vector.demo.search.GeoCoderActivity"
+387-->C:\Users\Haoyu\Desktop\demo\TencentMapSDK_Android_3D_v5.1.0\TencentMapDemo_Android-master\app\src\main\AndroidManifest.xml:376:13-52
+388            android:description="@string/demo_description_geocoder"
+388-->C:\Users\Haoyu\Desktop\demo\TencentMapSDK_Android_3D_v5.1.0\TencentMapDemo_Android-master\app\src\main\AndroidManifest.xml:377:13-68
+389            android:label="@string/demo_label_geocoder" >
+389-->C:\Users\Haoyu\Desktop\demo\TencentMapSDK_Android_3D_v5.1.0\TencentMapDemo_Android-master\app\src\main\AndroidManifest.xml:378:13-56
+390            <meta-data
+390-->C:\Users\Haoyu\Desktop\demo\TencentMapSDK_Android_3D_v5.1.0\TencentMapDemo_Android-master\app\src\main\AndroidManifest.xml:43:13-45:59
+391                android:name="@string/demo_type"
+391-->C:\Users\Haoyu\Desktop\demo\TencentMapSDK_Android_3D_v5.1.0\TencentMapDemo_Android-master\app\src\main\AndroidManifest.xml:44:17-49
+392                android:value="@string/demo_type_search" />
+392-->C:\Users\Haoyu\Desktop\demo\TencentMapSDK_Android_3D_v5.1.0\TencentMapDemo_Android-master\app\src\main\AndroidManifest.xml:45:17-56
+393        </activity>
+394        <activity
+394-->C:\Users\Haoyu\Desktop\demo\TencentMapSDK_Android_3D_v5.1.0\TencentMapDemo_Android-master\app\src\main\AndroidManifest.xml:383:9-390:20
+395            android:name="com.tencent.map.vector.demo.search.DistrictActivity"
+395-->C:\Users\Haoyu\Desktop\demo\TencentMapSDK_Android_3D_v5.1.0\TencentMapDemo_Android-master\app\src\main\AndroidManifest.xml:384:13-52
+396            android:description="@string/demo_description_district"
+396-->C:\Users\Haoyu\Desktop\demo\TencentMapSDK_Android_3D_v5.1.0\TencentMapDemo_Android-master\app\src\main\AndroidManifest.xml:385:13-68
+397            android:label="@string/demo_label_district" >
+397-->C:\Users\Haoyu\Desktop\demo\TencentMapSDK_Android_3D_v5.1.0\TencentMapDemo_Android-master\app\src\main\AndroidManifest.xml:386:13-56
+398            <meta-data
+398-->C:\Users\Haoyu\Desktop\demo\TencentMapSDK_Android_3D_v5.1.0\TencentMapDemo_Android-master\app\src\main\AndroidManifest.xml:43:13-45:59
+399                android:name="@string/demo_type"
+399-->C:\Users\Haoyu\Desktop\demo\TencentMapSDK_Android_3D_v5.1.0\TencentMapDemo_Android-master\app\src\main\AndroidManifest.xml:44:17-49
+400                android:value="@string/demo_type_search" />
+400-->C:\Users\Haoyu\Desktop\demo\TencentMapSDK_Android_3D_v5.1.0\TencentMapDemo_Android-master\app\src\main\AndroidManifest.xml:45:17-56
+401        </activity>
+402        <activity
+402-->C:\Users\Haoyu\Desktop\demo\TencentMapSDK_Android_3D_v5.1.0\TencentMapDemo_Android-master\app\src\main\AndroidManifest.xml:391:9-398:20
+403            android:name="com.tencent.map.vector.demo.polyline.LineTextActivity"
+403-->C:\Users\Haoyu\Desktop\demo\TencentMapSDK_Android_3D_v5.1.0\TencentMapDemo_Android-master\app\src\main\AndroidManifest.xml:392:13-54
+404            android:description="@string/demo_description_line_text"
+404-->C:\Users\Haoyu\Desktop\demo\TencentMapSDK_Android_3D_v5.1.0\TencentMapDemo_Android-master\app\src\main\AndroidManifest.xml:393:13-69
+405            android:label="@string/demo_label_line_text" >
+405-->C:\Users\Haoyu\Desktop\demo\TencentMapSDK_Android_3D_v5.1.0\TencentMapDemo_Android-master\app\src\main\AndroidManifest.xml:394:13-57
+406            <meta-data
+406-->C:\Users\Haoyu\Desktop\demo\TencentMapSDK_Android_3D_v5.1.0\TencentMapDemo_Android-master\app\src\main\AndroidManifest.xml:43:13-45:59
+407                android:name="@string/demo_type"
+407-->C:\Users\Haoyu\Desktop\demo\TencentMapSDK_Android_3D_v5.1.0\TencentMapDemo_Android-master\app\src\main\AndroidManifest.xml:44:17-49
+408                android:value="@string/demo_type_special" />
+408-->C:\Users\Haoyu\Desktop\demo\TencentMapSDK_Android_3D_v5.1.0\TencentMapDemo_Android-master\app\src\main\AndroidManifest.xml:45:17-56
+409        </activity>
+410        <activity
+410-->C:\Users\Haoyu\Desktop\demo\TencentMapSDK_Android_3D_v5.1.0\TencentMapDemo_Android-master\app\src\main\AndroidManifest.xml:399:9-407:20
+411            android:name="com.tencent.map.vector.demo.utils.BitMapActivity"
+411-->C:\Users\Haoyu\Desktop\demo\TencentMapSDK_Android_3D_v5.1.0\TencentMapDemo_Android-master\app\src\main\AndroidManifest.xml:400:13-49
+412            android:description="@string/demo_description_bitmap"
+412-->C:\Users\Haoyu\Desktop\demo\TencentMapSDK_Android_3D_v5.1.0\TencentMapDemo_Android-master\app\src\main\AndroidManifest.xml:401:13-66
+413            android:enabled="false"
+413-->C:\Users\Haoyu\Desktop\demo\TencentMapSDK_Android_3D_v5.1.0\TencentMapDemo_Android-master\app\src\main\AndroidManifest.xml:402:13-36
+414            android:label="@string/demo_label_bitmap" >
+414-->C:\Users\Haoyu\Desktop\demo\TencentMapSDK_Android_3D_v5.1.0\TencentMapDemo_Android-master\app\src\main\AndroidManifest.xml:403:13-54
+415            <meta-data
+415-->C:\Users\Haoyu\Desktop\demo\TencentMapSDK_Android_3D_v5.1.0\TencentMapDemo_Android-master\app\src\main\AndroidManifest.xml:43:13-45:59
+416                android:name="@string/demo_type"
+416-->C:\Users\Haoyu\Desktop\demo\TencentMapSDK_Android_3D_v5.1.0\TencentMapDemo_Android-master\app\src\main\AndroidManifest.xml:44:17-49
+417                android:value="@string/demo_type_tools" />
+417-->C:\Users\Haoyu\Desktop\demo\TencentMapSDK_Android_3D_v5.1.0\TencentMapDemo_Android-master\app\src\main\AndroidManifest.xml:45:17-56
+418        </activity>
+419        <activity
+419-->C:\Users\Haoyu\Desktop\demo\TencentMapSDK_Android_3D_v5.1.0\TencentMapDemo_Android-master\app\src\main\AndroidManifest.xml:408:9-415:20
+420            android:name="com.tencent.map.vector.demo.utils.SnapshotActivity"
+420-->C:\Users\Haoyu\Desktop\demo\TencentMapSDK_Android_3D_v5.1.0\TencentMapDemo_Android-master\app\src\main\AndroidManifest.xml:409:13-51
+421            android:description="@string/demo_description_map_snapshot"
+421-->C:\Users\Haoyu\Desktop\demo\TencentMapSDK_Android_3D_v5.1.0\TencentMapDemo_Android-master\app\src\main\AndroidManifest.xml:410:13-72
+422            android:label="@string/demo_label_map_snapshot" >
+422-->C:\Users\Haoyu\Desktop\demo\TencentMapSDK_Android_3D_v5.1.0\TencentMapDemo_Android-master\app\src\main\AndroidManifest.xml:411:13-60
+423            <meta-data
+423-->C:\Users\Haoyu\Desktop\demo\TencentMapSDK_Android_3D_v5.1.0\TencentMapDemo_Android-master\app\src\main\AndroidManifest.xml:43:13-45:59
+424                android:name="@string/demo_type"
+424-->C:\Users\Haoyu\Desktop\demo\TencentMapSDK_Android_3D_v5.1.0\TencentMapDemo_Android-master\app\src\main\AndroidManifest.xml:44:17-49
+425                android:value="@string/demo_type_tools" />
+425-->C:\Users\Haoyu\Desktop\demo\TencentMapSDK_Android_3D_v5.1.0\TencentMapDemo_Android-master\app\src\main\AndroidManifest.xml:45:17-56
+426        </activity>
+427        <activity
+427-->C:\Users\Haoyu\Desktop\demo\TencentMapSDK_Android_3D_v5.1.0\TencentMapDemo_Android-master\app\src\main\AndroidManifest.xml:416:9-423:20
+428            android:name="com.tencent.map.vector.demo.utils.CoordinateActivity"
+428-->C:\Users\Haoyu\Desktop\demo\TencentMapSDK_Android_3D_v5.1.0\TencentMapDemo_Android-master\app\src\main\AndroidManifest.xml:417:13-53
+429            android:description="@string/demo_description_projection"
+429-->C:\Users\Haoyu\Desktop\demo\TencentMapSDK_Android_3D_v5.1.0\TencentMapDemo_Android-master\app\src\main\AndroidManifest.xml:418:13-70
+430            android:label="@string/demo_label_projection" >
+430-->C:\Users\Haoyu\Desktop\demo\TencentMapSDK_Android_3D_v5.1.0\TencentMapDemo_Android-master\app\src\main\AndroidManifest.xml:419:13-58
+431            <meta-data
+431-->C:\Users\Haoyu\Desktop\demo\TencentMapSDK_Android_3D_v5.1.0\TencentMapDemo_Android-master\app\src\main\AndroidManifest.xml:43:13-45:59
+432                android:name="@string/demo_type"
+432-->C:\Users\Haoyu\Desktop\demo\TencentMapSDK_Android_3D_v5.1.0\TencentMapDemo_Android-master\app\src\main\AndroidManifest.xml:44:17-49
+433                android:value="@string/demo_type_tools" />
+433-->C:\Users\Haoyu\Desktop\demo\TencentMapSDK_Android_3D_v5.1.0\TencentMapDemo_Android-master\app\src\main\AndroidManifest.xml:45:17-56
+434        </activity>
+435        <activity android:name="com.tencent.map.vector.demo.basic.SupportMapFragmentActivity" />
+435-->C:\Users\Haoyu\Desktop\demo\TencentMapSDK_Android_3D_v5.1.0\TencentMapDemo_Android-master\app\src\main\AndroidManifest.xml:424:9-70
+435-->C:\Users\Haoyu\Desktop\demo\TencentMapSDK_Android_3D_v5.1.0\TencentMapDemo_Android-master\app\src\main\AndroidManifest.xml:424:19-67
+436        <activity
+436-->C:\Users\Haoyu\Desktop\demo\TencentMapSDK_Android_3D_v5.1.0\TencentMapDemo_Android-master\app\src\main\AndroidManifest.xml:425:9-432:20
+437            android:name="com.tencent.map.vector.demo.marker.CustomRenderActivity"
+437-->C:\Users\Haoyu\Desktop\demo\TencentMapSDK_Android_3D_v5.1.0\TencentMapDemo_Android-master\app\src\main\AndroidManifest.xml:426:13-56
+438            android:description="@string/demo_description_opengl"
+438-->C:\Users\Haoyu\Desktop\demo\TencentMapSDK_Android_3D_v5.1.0\TencentMapDemo_Android-master\app\src\main\AndroidManifest.xml:427:13-66
+439            android:label="@string/demo_label_opengl" >
+439-->C:\Users\Haoyu\Desktop\demo\TencentMapSDK_Android_3D_v5.1.0\TencentMapDemo_Android-master\app\src\main\AndroidManifest.xml:428:13-54
+440            <meta-data
+440-->C:\Users\Haoyu\Desktop\demo\TencentMapSDK_Android_3D_v5.1.0\TencentMapDemo_Android-master\app\src\main\AndroidManifest.xml:43:13-45:59
+441                android:name="@string/demo_type"
+441-->C:\Users\Haoyu\Desktop\demo\TencentMapSDK_Android_3D_v5.1.0\TencentMapDemo_Android-master\app\src\main\AndroidManifest.xml:44:17-49
+442                android:value="@string/demo_type_draw" />
+442-->C:\Users\Haoyu\Desktop\demo\TencentMapSDK_Android_3D_v5.1.0\TencentMapDemo_Android-master\app\src\main\AndroidManifest.xml:45:17-56
+443        </activity>
+444        <activity
+444-->C:\Users\Haoyu\Desktop\demo\TencentMapSDK_Android_3D_v5.1.0\TencentMapDemo_Android-master\app\src\main\AndroidManifest.xml:433:9-440:20
+445            android:name="com.tencent.map.vector.demo.marker.GroundOverlayActivity"
+445-->C:\Users\Haoyu\Desktop\demo\TencentMapSDK_Android_3D_v5.1.0\TencentMapDemo_Android-master\app\src\main\AndroidManifest.xml:434:13-57
+446            android:description="@string/demo_description_overlay"
+446-->C:\Users\Haoyu\Desktop\demo\TencentMapSDK_Android_3D_v5.1.0\TencentMapDemo_Android-master\app\src\main\AndroidManifest.xml:435:13-67
+447            android:label="@string/demo_label_ground_overlay" >
+447-->C:\Users\Haoyu\Desktop\demo\TencentMapSDK_Android_3D_v5.1.0\TencentMapDemo_Android-master\app\src\main\AndroidManifest.xml:436:13-62
+448            <meta-data
+448-->C:\Users\Haoyu\Desktop\demo\TencentMapSDK_Android_3D_v5.1.0\TencentMapDemo_Android-master\app\src\main\AndroidManifest.xml:43:13-45:59
+449                android:name="@string/demo_type"
+449-->C:\Users\Haoyu\Desktop\demo\TencentMapSDK_Android_3D_v5.1.0\TencentMapDemo_Android-master\app\src\main\AndroidManifest.xml:44:17-49
+450                android:value="@string/demo_type_draw" />
+450-->C:\Users\Haoyu\Desktop\demo\TencentMapSDK_Android_3D_v5.1.0\TencentMapDemo_Android-master\app\src\main\AndroidManifest.xml:45:17-56
+451        </activity>
+452        <activity
+452-->C:\Users\Haoyu\Desktop\demo\TencentMapSDK_Android_3D_v5.1.0\TencentMapDemo_Android-master\app\src\main\AndroidManifest.xml:441:9-448:20
+453            android:name="com.tencent.map.vector.demo.marker.AoiLayerActivity"
+453-->C:\Users\Haoyu\Desktop\demo\TencentMapSDK_Android_3D_v5.1.0\TencentMapDemo_Android-master\app\src\main\AndroidManifest.xml:442:13-52
+454            android:description="@string/demo_description_aoi"
+454-->C:\Users\Haoyu\Desktop\demo\TencentMapSDK_Android_3D_v5.1.0\TencentMapDemo_Android-master\app\src\main\AndroidManifest.xml:443:13-63
+455            android:label="@string/demo_label_aoi" >
+455-->C:\Users\Haoyu\Desktop\demo\TencentMapSDK_Android_3D_v5.1.0\TencentMapDemo_Android-master\app\src\main\AndroidManifest.xml:444:13-51
+456            <meta-data
+456-->C:\Users\Haoyu\Desktop\demo\TencentMapSDK_Android_3D_v5.1.0\TencentMapDemo_Android-master\app\src\main\AndroidManifest.xml:43:13-45:59
+457                android:name="@string/demo_type"
+457-->C:\Users\Haoyu\Desktop\demo\TencentMapSDK_Android_3D_v5.1.0\TencentMapDemo_Android-master\app\src\main\AndroidManifest.xml:44:17-49
+458                android:value="@string/demo_type_draw" />
+458-->C:\Users\Haoyu\Desktop\demo\TencentMapSDK_Android_3D_v5.1.0\TencentMapDemo_Android-master\app\src\main\AndroidManifest.xml:45:17-56
+459        </activity>
+460        <activity
+460-->C:\Users\Haoyu\Desktop\demo\TencentMapSDK_Android_3D_v5.1.0\TencentMapDemo_Android-master\app\src\main\AndroidManifest.xml:449:9-456:20
+461            android:name="com.tencent.map.vector.demo.heatoverlay.VectorHeatMapActivity"
+461-->C:\Users\Haoyu\Desktop\demo\TencentMapSDK_Android_3D_v5.1.0\TencentMapDemo_Android-master\app\src\main\AndroidManifest.xml:450:13-62
+462            android:description="@string/demo_description_vectorheatmap"
+462-->C:\Users\Haoyu\Desktop\demo\TencentMapSDK_Android_3D_v5.1.0\TencentMapDemo_Android-master\app\src\main\AndroidManifest.xml:451:13-73
+463            android:label="@string/demo_label_vectorheatmap" >
+463-->C:\Users\Haoyu\Desktop\demo\TencentMapSDK_Android_3D_v5.1.0\TencentMapDemo_Android-master\app\src\main\AndroidManifest.xml:452:13-61
+464            <meta-data
+464-->C:\Users\Haoyu\Desktop\demo\TencentMapSDK_Android_3D_v5.1.0\TencentMapDemo_Android-master\app\src\main\AndroidManifest.xml:43:13-45:59
+465                android:name="@string/demo_type"
+465-->C:\Users\Haoyu\Desktop\demo\TencentMapSDK_Android_3D_v5.1.0\TencentMapDemo_Android-master\app\src\main\AndroidManifest.xml:44:17-49
+466                android:value="@string/demo_type_draw" />
+466-->C:\Users\Haoyu\Desktop\demo\TencentMapSDK_Android_3D_v5.1.0\TencentMapDemo_Android-master\app\src\main\AndroidManifest.xml:45:17-56
+467        </activity>
+468        <activity
+468-->C:\Users\Haoyu\Desktop\demo\TencentMapSDK_Android_3D_v5.1.0\TencentMapDemo_Android-master\app\src\main\AndroidManifest.xml:457:9-464:20
+469            android:name="com.tencent.map.vector.demo.heatoverlay.ArcLineLayerActivity"
+469-->C:\Users\Haoyu\Desktop\demo\TencentMapSDK_Android_3D_v5.1.0\TencentMapDemo_Android-master\app\src\main\AndroidManifest.xml:458:13-61
+470            android:description="@string/demo_description_arcline"
+470-->C:\Users\Haoyu\Desktop\demo\TencentMapSDK_Android_3D_v5.1.0\TencentMapDemo_Android-master\app\src\main\AndroidManifest.xml:459:13-67
+471            android:label="@string/demo_label_arcline_map" >
+471-->C:\Users\Haoyu\Desktop\demo\TencentMapSDK_Android_3D_v5.1.0\TencentMapDemo_Android-master\app\src\main\AndroidManifest.xml:460:13-59
+472            <meta-data
+472-->C:\Users\Haoyu\Desktop\demo\TencentMapSDK_Android_3D_v5.1.0\TencentMapDemo_Android-master\app\src\main\AndroidManifest.xml:43:13-45:59
+473                android:name="@string/demo_type"
+473-->C:\Users\Haoyu\Desktop\demo\TencentMapSDK_Android_3D_v5.1.0\TencentMapDemo_Android-master\app\src\main\AndroidManifest.xml:44:17-49
+474                android:value="@string/demo_type_draw" />
+474-->C:\Users\Haoyu\Desktop\demo\TencentMapSDK_Android_3D_v5.1.0\TencentMapDemo_Android-master\app\src\main\AndroidManifest.xml:45:17-56
+475        </activity>
+476        <activity
+476-->C:\Users\Haoyu\Desktop\demo\TencentMapSDK_Android_3D_v5.1.0\TencentMapDemo_Android-master\app\src\main\AndroidManifest.xml:465:9-472:20
+477            android:name="com.tencent.map.vector.demo.heatoverlay.HeatMapVectorOverlayActivity"
+477-->C:\Users\Haoyu\Desktop\demo\TencentMapSDK_Android_3D_v5.1.0\TencentMapDemo_Android-master\app\src\main\AndroidManifest.xml:466:13-69
+478            android:description="@string/demo_description_3dheatmap"
+478-->C:\Users\Haoyu\Desktop\demo\TencentMapSDK_Android_3D_v5.1.0\TencentMapDemo_Android-master\app\src\main\AndroidManifest.xml:467:13-69
+479            android:label="@string/demo_label_3d_heat_map" >
+479-->C:\Users\Haoyu\Desktop\demo\TencentMapSDK_Android_3D_v5.1.0\TencentMapDemo_Android-master\app\src\main\AndroidManifest.xml:468:13-59
+480            <meta-data
+480-->C:\Users\Haoyu\Desktop\demo\TencentMapSDK_Android_3D_v5.1.0\TencentMapDemo_Android-master\app\src\main\AndroidManifest.xml:43:13-45:59
+481                android:name="@string/demo_type"
+481-->C:\Users\Haoyu\Desktop\demo\TencentMapSDK_Android_3D_v5.1.0\TencentMapDemo_Android-master\app\src\main\AndroidManifest.xml:44:17-49
+482                android:value="@string/demo_type_draw" />
+482-->C:\Users\Haoyu\Desktop\demo\TencentMapSDK_Android_3D_v5.1.0\TencentMapDemo_Android-master\app\src\main\AndroidManifest.xml:45:17-56
+483        </activity>
+484        <activity
+484-->C:\Users\Haoyu\Desktop\demo\TencentMapSDK_Android_3D_v5.1.0\TencentMapDemo_Android-master\app\src\main\AndroidManifest.xml:473:9-480:20
+485            android:name="com.tencent.map.vector.demo.heatoverlay.AggregationOverlayActivity"
+485-->C:\Users\Haoyu\Desktop\demo\TencentMapSDK_Android_3D_v5.1.0\TencentMapDemo_Android-master\app\src\main\AndroidManifest.xml:474:13-67
+486            android:description="@string/demo_description_AggregationOverlay"
+486-->C:\Users\Haoyu\Desktop\demo\TencentMapSDK_Android_3D_v5.1.0\TencentMapDemo_Android-master\app\src\main\AndroidManifest.xml:475:13-78
+487            android:label="@string/demo_label_3d_aggregationOverlay_map" >
+487-->C:\Users\Haoyu\Desktop\demo\TencentMapSDK_Android_3D_v5.1.0\TencentMapDemo_Android-master\app\src\main\AndroidManifest.xml:476:13-73
+488            <meta-data
+488-->C:\Users\Haoyu\Desktop\demo\TencentMapSDK_Android_3D_v5.1.0\TencentMapDemo_Android-master\app\src\main\AndroidManifest.xml:43:13-45:59
+489                android:name="@string/demo_type"
+489-->C:\Users\Haoyu\Desktop\demo\TencentMapSDK_Android_3D_v5.1.0\TencentMapDemo_Android-master\app\src\main\AndroidManifest.xml:44:17-49
+490                android:value="@string/demo_type_draw" />
+490-->C:\Users\Haoyu\Desktop\demo\TencentMapSDK_Android_3D_v5.1.0\TencentMapDemo_Android-master\app\src\main\AndroidManifest.xml:45:17-56
+491        </activity>
+492        <activity
+492-->C:\Users\Haoyu\Desktop\demo\TencentMapSDK_Android_3D_v5.1.0\TencentMapDemo_Android-master\app\src\main\AndroidManifest.xml:481:9-488:20
+493            android:name="com.tencent.map.vector.demo.heatoverlay.ScatterPlotOverlayActivity"
+493-->C:\Users\Haoyu\Desktop\demo\TencentMapSDK_Android_3D_v5.1.0\TencentMapDemo_Android-master\app\src\main\AndroidManifest.xml:482:13-67
+494            android:description="@string/demo_description_ScatterPlotOverlay"
+494-->C:\Users\Haoyu\Desktop\demo\TencentMapSDK_Android_3D_v5.1.0\TencentMapDemo_Android-master\app\src\main\AndroidManifest.xml:483:13-78
+495            android:label="@string/demo_label_3d_scatterplotoverlay_map" >
+495-->C:\Users\Haoyu\Desktop\demo\TencentMapSDK_Android_3D_v5.1.0\TencentMapDemo_Android-master\app\src\main\AndroidManifest.xml:484:13-73
+496            <meta-data
+496-->C:\Users\Haoyu\Desktop\demo\TencentMapSDK_Android_3D_v5.1.0\TencentMapDemo_Android-master\app\src\main\AndroidManifest.xml:43:13-45:59
+497                android:name="@string/demo_type"
+497-->C:\Users\Haoyu\Desktop\demo\TencentMapSDK_Android_3D_v5.1.0\TencentMapDemo_Android-master\app\src\main\AndroidManifest.xml:44:17-49
+498                android:value="@string/demo_type_draw" />
+498-->C:\Users\Haoyu\Desktop\demo\TencentMapSDK_Android_3D_v5.1.0\TencentMapDemo_Android-master\app\src\main\AndroidManifest.xml:45:17-56
+499        </activity>
+500        <activity
+500-->C:\Users\Haoyu\Desktop\demo\TencentMapSDK_Android_3D_v5.1.0\TencentMapDemo_Android-master\app\src\main\AndroidManifest.xml:489:9-496:20
+501            android:name="com.tencent.map.vector.demo.heatoverlay.TrailOverlayActivity"
+501-->C:\Users\Haoyu\Desktop\demo\TencentMapSDK_Android_3D_v5.1.0\TencentMapDemo_Android-master\app\src\main\AndroidManifest.xml:490:13-61
+502            android:description="@string/demo_description_TrailOverlay"
+502-->C:\Users\Haoyu\Desktop\demo\TencentMapSDK_Android_3D_v5.1.0\TencentMapDemo_Android-master\app\src\main\AndroidManifest.xml:491:13-72
+503            android:label="@string/demo_label_3d_railoverltay_map" >
+503-->C:\Users\Haoyu\Desktop\demo\TencentMapSDK_Android_3D_v5.1.0\TencentMapDemo_Android-master\app\src\main\AndroidManifest.xml:492:13-67
+504            <meta-data
+504-->C:\Users\Haoyu\Desktop\demo\TencentMapSDK_Android_3D_v5.1.0\TencentMapDemo_Android-master\app\src\main\AndroidManifest.xml:43:13-45:59
+505                android:name="@string/demo_type"
+505-->C:\Users\Haoyu\Desktop\demo\TencentMapSDK_Android_3D_v5.1.0\TencentMapDemo_Android-master\app\src\main\AndroidManifest.xml:44:17-49
+506                android:value="@string/demo_type_draw" />
+506-->C:\Users\Haoyu\Desktop\demo\TencentMapSDK_Android_3D_v5.1.0\TencentMapDemo_Android-master\app\src\main\AndroidManifest.xml:45:17-56
+507        </activity>
+508        <activity
+508-->C:\Users\Haoyu\Desktop\demo\TencentMapSDK_Android_3D_v5.1.0\TencentMapDemo_Android-master\app\src\main\AndroidManifest.xml:497:9-504:20
+509            android:name="com.tencent.map.vector.demo.heatoverlay.GLModelActivity"
+509-->C:\Users\Haoyu\Desktop\demo\TencentMapSDK_Android_3D_v5.1.0\TencentMapDemo_Android-master\app\src\main\AndroidManifest.xml:498:13-56
+510            android:description="@string/demo_description_glModel"
+510-->C:\Users\Haoyu\Desktop\demo\TencentMapSDK_Android_3D_v5.1.0\TencentMapDemo_Android-master\app\src\main\AndroidManifest.xml:499:13-67
+511            android:label="@string/demo_label_glModel" >
+511-->C:\Users\Haoyu\Desktop\demo\TencentMapSDK_Android_3D_v5.1.0\TencentMapDemo_Android-master\app\src\main\AndroidManifest.xml:500:13-55
+512            <meta-data
+512-->C:\Users\Haoyu\Desktop\demo\TencentMapSDK_Android_3D_v5.1.0\TencentMapDemo_Android-master\app\src\main\AndroidManifest.xml:43:13-45:59
+513                android:name="@string/demo_type"
+513-->C:\Users\Haoyu\Desktop\demo\TencentMapSDK_Android_3D_v5.1.0\TencentMapDemo_Android-master\app\src\main\AndroidManifest.xml:44:17-49
+514                android:value="@string/demo_type_draw" />
+514-->C:\Users\Haoyu\Desktop\demo\TencentMapSDK_Android_3D_v5.1.0\TencentMapDemo_Android-master\app\src\main\AndroidManifest.xml:45:17-56
+515        </activity>
+516        <activity
+516-->C:\Users\Haoyu\Desktop\demo\TencentMapSDK_Android_3D_v5.1.0\TencentMapDemo_Android-master\app\src\main\AndroidManifest.xml:505:9-512:20
+517            android:name="com.tencent.map.vector.demo.basic.OfflineMapActivity"
+517-->C:\Users\Haoyu\Desktop\demo\TencentMapSDK_Android_3D_v5.1.0\TencentMapDemo_Android-master\app\src\main\AndroidManifest.xml:506:13-53
+518            android:description="@string/demo_description_offline_map"
+518-->C:\Users\Haoyu\Desktop\demo\TencentMapSDK_Android_3D_v5.1.0\TencentMapDemo_Android-master\app\src\main\AndroidManifest.xml:507:13-71
+519            android:label="@string/demo_label_offline_map" >
+519-->C:\Users\Haoyu\Desktop\demo\TencentMapSDK_Android_3D_v5.1.0\TencentMapDemo_Android-master\app\src\main\AndroidManifest.xml:508:13-59
+520            <meta-data
+520-->C:\Users\Haoyu\Desktop\demo\TencentMapSDK_Android_3D_v5.1.0\TencentMapDemo_Android-master\app\src\main\AndroidManifest.xml:43:13-45:59
+521                android:name="@string/demo_type"
+521-->C:\Users\Haoyu\Desktop\demo\TencentMapSDK_Android_3D_v5.1.0\TencentMapDemo_Android-master\app\src\main\AndroidManifest.xml:44:17-49
+522                android:value="@string/demo_type_basic" />
+522-->C:\Users\Haoyu\Desktop\demo\TencentMapSDK_Android_3D_v5.1.0\TencentMapDemo_Android-master\app\src\main\AndroidManifest.xml:45:17-56
+523        </activity>
+524        <activity
+524-->C:\Users\Haoyu\Desktop\demo\TencentMapSDK_Android_3D_v5.1.0\TencentMapDemo_Android-master\app\src\main\AndroidManifest.xml:513:9-520:20
+525            android:name="com.tencent.map.vector.demo.basic.RecyclerListActivity"
+525-->C:\Users\Haoyu\Desktop\demo\TencentMapSDK_Android_3D_v5.1.0\TencentMapDemo_Android-master\app\src\main\AndroidManifest.xml:514:13-55
+526            android:description="@string/demo_description_recycler_map"
+526-->C:\Users\Haoyu\Desktop\demo\TencentMapSDK_Android_3D_v5.1.0\TencentMapDemo_Android-master\app\src\main\AndroidManifest.xml:515:13-72
+527            android:label="@string/demo_label_recycler_map" >
+527-->C:\Users\Haoyu\Desktop\demo\TencentMapSDK_Android_3D_v5.1.0\TencentMapDemo_Android-master\app\src\main\AndroidManifest.xml:516:13-60
+528            <meta-data
+528-->C:\Users\Haoyu\Desktop\demo\TencentMapSDK_Android_3D_v5.1.0\TencentMapDemo_Android-master\app\src\main\AndroidManifest.xml:43:13-45:59
+529                android:name="@string/demo_type"
+529-->C:\Users\Haoyu\Desktop\demo\TencentMapSDK_Android_3D_v5.1.0\TencentMapDemo_Android-master\app\src\main\AndroidManifest.xml:44:17-49
+530                android:value="@string/demo_type_basic" />
+530-->C:\Users\Haoyu\Desktop\demo\TencentMapSDK_Android_3D_v5.1.0\TencentMapDemo_Android-master\app\src\main\AndroidManifest.xml:45:17-56
+531        </activity>
+532        <activity
+532-->C:\Users\Haoyu\Desktop\demo\TencentMapSDK_Android_3D_v5.1.0\TencentMapDemo_Android-master\app\src\main\AndroidManifest.xml:521:9-528:20
+533            android:name="com.tencent.map.vector.demo.smooth.SmoothMoveActivity"
+533-->C:\Users\Haoyu\Desktop\demo\TencentMapSDK_Android_3D_v5.1.0\TencentMapDemo_Android-master\app\src\main\AndroidManifest.xml:522:13-54
+534            android:description="@string/demo_description_smooth_move"
+534-->C:\Users\Haoyu\Desktop\demo\TencentMapSDK_Android_3D_v5.1.0\TencentMapDemo_Android-master\app\src\main\AndroidManifest.xml:523:13-71
+535            android:label="@string/demo_label_smooth_move" >
+535-->C:\Users\Haoyu\Desktop\demo\TencentMapSDK_Android_3D_v5.1.0\TencentMapDemo_Android-master\app\src\main\AndroidManifest.xml:524:13-59
+536            <meta-data
+536-->C:\Users\Haoyu\Desktop\demo\TencentMapSDK_Android_3D_v5.1.0\TencentMapDemo_Android-master\app\src\main\AndroidManifest.xml:43:13-45:59
+537                android:name="@string/demo_type"
+537-->C:\Users\Haoyu\Desktop\demo\TencentMapSDK_Android_3D_v5.1.0\TencentMapDemo_Android-master\app\src\main\AndroidManifest.xml:44:17-49
+538                android:value="@string/demo_type_draw" />
+538-->C:\Users\Haoyu\Desktop\demo\TencentMapSDK_Android_3D_v5.1.0\TencentMapDemo_Android-master\app\src\main\AndroidManifest.xml:45:17-56
+539        </activity> <!-- 如果您key确认无误，却依然授权没有通过，请检查您的key的白名单配置 -->
+540        <meta-data
+540-->C:\Users\Haoyu\Desktop\demo\TencentMapSDK_Android_3D_v5.1.0\TencentMapDemo_Android-master\app\src\main\AndroidManifest.xml:529:9-531:67
+541            android:name="TencentMapSDK"
+541-->C:\Users\Haoyu\Desktop\demo\TencentMapSDK_Android_3D_v5.1.0\TencentMapDemo_Android-master\app\src\main\AndroidManifest.xml:530:13-41
+542            android:value="IHSBZ-D243Z-4BOXX-ZQ4U3-MXEQF-HPBNO" />
+542-->C:\Users\Haoyu\Desktop\demo\TencentMapSDK_Android_3D_v5.1.0\TencentMapDemo_Android-master\app\src\main\AndroidManifest.xml:531:13-64
+543
+544        <activity
+544-->[pub.devrel:easypermissions:2.0.1] C:\Users\Haoyu\.gradle\wrapper\dists\gradle-8.2\caches\transforms-2\files-2.1\92235f451dd812bcbfaa2ff11339d6d0\jetified-easypermissions-2.0.1\AndroidManifest.xml:12:9-16:66
+545            android:name="pub.devrel.easypermissions.AppSettingsDialogHolderActivity"
+545-->[pub.devrel:easypermissions:2.0.1] C:\Users\Haoyu\.gradle\wrapper\dists\gradle-8.2\caches\transforms-2\files-2.1\92235f451dd812bcbfaa2ff11339d6d0\jetified-easypermissions-2.0.1\AndroidManifest.xml:13:13-86
+546            android:exported="false"
+546-->[pub.devrel:easypermissions:2.0.1] C:\Users\Haoyu\.gradle\wrapper\dists\gradle-8.2\caches\transforms-2\files-2.1\92235f451dd812bcbfaa2ff11339d6d0\jetified-easypermissions-2.0.1\AndroidManifest.xml:14:13-37
+547            android:label=""
+547-->[pub.devrel:easypermissions:2.0.1] C:\Users\Haoyu\.gradle\wrapper\dists\gradle-8.2\caches\transforms-2\files-2.1\92235f451dd812bcbfaa2ff11339d6d0\jetified-easypermissions-2.0.1\AndroidManifest.xml:15:13-29
+548            android:theme="@style/EasyPermissions.Transparent" />
+548-->[pub.devrel:easypermissions:2.0.1] C:\Users\Haoyu\.gradle\wrapper\dists\gradle-8.2\caches\transforms-2\files-2.1\92235f451dd812bcbfaa2ff11339d6d0\jetified-easypermissions-2.0.1\AndroidManifest.xml:16:13-63
+549
+550        <meta-data
+550-->[com.tencent.map:tencent-map-vector-sdk:5.1.0] C:\Users\Haoyu\.gradle\wrapper\dists\gradle-8.2\caches\transforms-2\files-2.1\f4dceb27ec508f158cbb334a7116aeea\jetified-tencent-map-vector-sdk-5.1.0\AndroidManifest.xml:15:9-17:62
+551            android:name="TMS_ShellConfig"
+551-->[com.tencent.map:tencent-map-vector-sdk:5.1.0] C:\Users\Haoyu\.gradle\wrapper\dists\gradle-8.2\caches\transforms-2\files-2.1\f4dceb27ec508f158cbb334a7116aeea\jetified-tencent-map-vector-sdk-5.1.0\AndroidManifest.xml:16:13-43
+552            android:value="com.tencent.mapsdk.BuildConfig" />
+552-->[com.tencent.map:tencent-map-vector-sdk:5.1.0] C:\Users\Haoyu\.gradle\wrapper\dists\gradle-8.2\caches\transforms-2\files-2.1\f4dceb27ec508f158cbb334a7116aeea\jetified-tencent-map-vector-sdk-5.1.0\AndroidManifest.xml:17:13-59
+553    </application>
+554
+555</manifest>

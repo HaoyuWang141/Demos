@@ -1,0 +1,10 @@
+<component name="libraryTable">
+  <library name="Gradle: com.tencent.map.geolocation:TencentLocationSdk-openplatform:7.5.2@aar">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/wrapper/dists/gradle-8.2/caches/transforms-2/files-2.1/e7ac9e04fc3f0354d3b4243be149e92e/jetified-TencentLocationSdk-openplatform-7.5.2/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/wrapper/dists/gradle-8.2/caches/transforms-2/files-2.1/e7ac9e04fc3f0354d3b4243be149e92e/jetified-TencentLocationSdk-openplatform-7.5.2/AndroidManifest.xml" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

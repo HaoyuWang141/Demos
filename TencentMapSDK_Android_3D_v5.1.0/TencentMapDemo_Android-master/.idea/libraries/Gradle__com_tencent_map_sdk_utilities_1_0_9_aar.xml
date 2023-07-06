@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="Gradle: com.tencent.map:sdk-utilities:1.0.9@aar">
+    <CLASSES>
+      <root url="file://$USER_HOME$/.gradle/wrapper/dists/gradle-8.2/caches/transforms-2/files-2.1/fcbbe63df84cd2df4320128df7bf7b62/jetified-sdk-utilities-1.0.9/AndroidManifest.xml" />
+      <root url="file://$USER_HOME$/.gradle/wrapper/dists/gradle-8.2/caches/transforms-2/files-2.1/fcbbe63df84cd2df4320128df7bf7b62/jetified-sdk-utilities-1.0.9/res" />
+      <root url="jar://$USER_HOME$/.gradle/wrapper/dists/gradle-8.2/caches/transforms-2/files-2.1/fcbbe63df84cd2df4320128df7bf7b62/jetified-sdk-utilities-1.0.9/jars/classes.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
